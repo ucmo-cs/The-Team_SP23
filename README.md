@@ -12,6 +12,7 @@ Possible Technologies used :
 UI - Angular, Angular Material (https://material.angular.io/)
 Hosting - AWS (Lambda, DynamoDB, API Gateway, S3) , 
 Backend - NodeJS , 
+
 Frameworks/IaC - Serverless Framework
 
 ![User PDP p1 - Personal  Development Plan](https://user-images.githubusercontent.com/89263103/218176588-e56a61e0-f7f7-4517-9af4-df604f1e8ed0.png)
