@@ -15,8 +15,3 @@ Backend - NodeJS ,
 
 Frameworks/IaC - Serverless Framework
 
-![User PDP p1 - Personal  Development Plan](https://user-images.githubusercontent.com/89263103/218176588-e56a61e0-f7f7-4517-9af4-df604f1e8ed0.png)
-
-![User PDP p2 - Self Assessment](https://user-images.githubusercontent.com/89263103/218176670-ddf02b1d-297a-43df-9e52-8dd4cb296180.png)
-
-![User PDP p3 - Performance Evaluation](https://user-images.githubusercontent.com/89263103/218176710-89be6318-c82e-41a6-8829-fad8babeafdc.png)
