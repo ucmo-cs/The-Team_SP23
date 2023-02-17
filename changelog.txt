@@ -1,0 +1,2 @@
+2/17/2023
+- Upload a basic Angular project to github for base files
