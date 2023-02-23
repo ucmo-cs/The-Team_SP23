@@ -1,0 +1,59 @@
+service: The-Team_SP23
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: us-east-1
+  stage: ${opt:stage, 'dev'}
+  environment:
+    PERSONAL_TABLE:
+      Ref: PersonalDevTable
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:*
+      Resource:
+        - "Fn::GetAtt": [PersonalDevTable, Arn]
+
+functions:
+  createPersonalDevTable:
+    handler: src/PersonalDevTable.create
+    events:
+      - httpApi:
+          path: /PDT/create
+          method: POST
+  listPersonalDevTable:
+    handler: src/PersonalDevTable.list
+    events:
+      - httpApi:
+          path: /PDT/list
+          method: GET
+  getPersonalDevTable:
+    handler: src/PersonalDevTable.getByID
+    events:
+      - httpApi:
+          path: /PDT/id
+          method: GET
+  delPersonalDevTable:
+    handler: src/PersonalDevTable.delete
+    events:
+      - httpApi:
+          path: /PDT/id
+          method: DELETE
+
+resources:
+  Resources:
+    PersonalDevTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: PersonalDevTable
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
