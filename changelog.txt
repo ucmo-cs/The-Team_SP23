@@ -3,3 +3,6 @@
 
 2/21/2023
 - Edit stylesheet for background gradient
+
+2/23/2023
+- Submit beginning code
