@@ -1,0 +1,19 @@
+html,body {
+  background-color: green; /* fallback color */
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+mat-card{
+  background-color: antiquewhite;
+  max-width: 400px;
+
+}
+
+mat-card-title {
+  justify-content: center;
+  display: flex;
+}
+
+
