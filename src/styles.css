@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 html {
-    background-color: red; /* fallback color */
+    background-color: oragne; /* fallback color */
     background-image: linear-gradient( to bottom right, #fbd333, #ef9d33);
     background-repeat: no-repeat;
     background-size: cover;
@@ -8,9 +8,4 @@ html {
     height: 100%;
 }
 
-mat-card {
-  margin: 20px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
