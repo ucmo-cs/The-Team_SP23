@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 html {
-    background-color: oragne; /* fallback color */
+    background-color: orange; /* fallback color */
     background-image: linear-gradient( to bottom right, #fbd333, #ef9d33);
     background-repeat: no-repeat;
     background-size: cover;
