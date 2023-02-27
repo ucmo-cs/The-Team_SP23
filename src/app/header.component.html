@@ -1,0 +1,27 @@
+<div>
+    <mat-toolbar>
+        <img src="/src/images/roc.png">
+
+
+        <span style="flex: .6 1 auto;"></span>
+        <p>Risen One Employee Portal</p>
+        <span style="flex: .5 1 auto;"></span>
+
+        <button class="hamburger" mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>Self Assessment</button>
+          </mat-menu>
+
+        <button style="background-color:black" mat-icon-button [matMenuTriggerFor]="user">
+              <mat-icon class="user">person_outline</mat-icon>
+        </button>
+
+        <mat-menu #user="matMenu">
+            <button mat-menu-item>Logout</button>
+        </mat-menu>
+
+    </mat-toolbar>
+</div>

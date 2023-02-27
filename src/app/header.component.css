@@ -1,0 +1,29 @@
+.spacer {
+    flex: .5 1 auto;
+}
+
+div, mat-toolbar {
+    background-color: black;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    color: whitesmoke;
+    font-family: "Arial Black";
+}
+
+.hamburger{
+    color: white;
+    background-color: black;
+}
+
+.user {
+    background-color: white;
+    border-radius: 10px;
+    padding: 3px;
+}
