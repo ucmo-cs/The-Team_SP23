@@ -1,11 +1,15 @@
 mat-card {
-  margin: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 50px;
+  margin-left: 5%;
+  margin-right: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  height: 80%;
+  font-family: 'Roboto';
+  height: 100%;
+  border-radius: 30px;
 }
 
+h1 {
+  font-size: 24px;
+}
