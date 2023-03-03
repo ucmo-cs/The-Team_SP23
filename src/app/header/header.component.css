@@ -1,7 +1,3 @@
-.spacer {
-    flex: .5 1 auto;
-}
-
 div, mat-toolbar {
     background-color: black;
     padding-top: .5em;
@@ -12,14 +8,18 @@ div, mat-toolbar {
     justify-content: center;
 }
 
-p {
-    color: whitesmoke;
-    font-family: "Arial Black";
-}
-
 .hamburger{
     color: white;
     background-color: black;
+}
+
+.spacer {
+    flex: .5 1 auto;
+}
+
+.title {
+    color: whitesmoke;
+    font-family: "Arial Black";
 }
 
 .user {
