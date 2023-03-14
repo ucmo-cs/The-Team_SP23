@@ -1,10 +1,12 @@
-service: The-Team_SP23
+service: The-Team-SP23
 frameworkVersion: '3'
 
 provider:
+  httpApi:
+    cors: true
   name: aws
-  runtime: nodejs12.x
-  region: us-east-1
+  runtime: nodejs14.x
+  region: us-east-2
   stage: ${opt:stage, 'dev'}
   environment:
     PERSONAL_TABLE:
@@ -12,35 +14,29 @@ provider:
   iamRoleStatements:
     - Effect: Allow
       Action:
-        - dynamodb:*
+            - dynamodb:*
       Resource:
         - "Fn::GetAtt": [PersonalDevTable, Arn]
 
 functions:
-  createPersonalDevTable:
-    handler: src/PersonalDevTable.create
+  createPDT:
+    handler: createPDT.createPDT
     events:
       - httpApi:
-          path: /PDT/create
+          path: /PDT
           method: POST
-  listPersonalDevTable:
-    handler: src/PersonalDevTable.list
+  listItems:
+    handler: listItems.listItems
     events:
       - httpApi:
-          path: /PDT/list
+          path: /{model}
           method: GET
-  getPersonalDevTable:
-    handler: src/PersonalDevTable.getByID
+  getItem:
+    handler: getItem.getItem
     events:
       - httpApi:
-          path: /PDT/id
+          path: /{model}/{id}
           method: GET
-  delPersonalDevTable:
-    handler: src/PersonalDevTable.delete
-    events:
-      - httpApi:
-          path: /PDT/id
-          method: DELETE
 
 resources:
   Resources:
