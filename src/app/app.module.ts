@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatTabsModule } from '@angular/material/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
@@ -17,12 +18,12 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    MatTabsModule
     BrowserAnimationsModule,
     MatGridListModule,
     MatIconModule,
     MatMenuModule,
     MatToolbarModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]
