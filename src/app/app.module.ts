@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { MatTabsModule } from '@angular/material/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatIconModule} from '@angular/material/icon';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { BrowserModule } from '@angular/platform-browser';
+import { MatGridListModule} from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { Header } from './header/header.component';
 
@@ -17,12 +17,12 @@ import { AppComponent } from './app.component';
     Header
   ],
   imports: [
-    BrowserModule,
-    MatTabsModule
     BrowserAnimationsModule,
+    BrowserModule,
     MatGridListModule,
     MatIconModule,
     MatMenuModule,
+    MatTabsModule,
     MatToolbarModule
   ],
   providers: [],
