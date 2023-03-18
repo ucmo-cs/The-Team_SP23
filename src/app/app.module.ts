@@ -10,6 +10,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { Header } from './header/header.component';
 
 import { AppComponent } from './app.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    MatCardModule,
     MatTabsModule
     BrowserAnimationsModule,
     MatGridListModule,
