@@ -89,6 +89,18 @@
         "LogGroupName": "/aws/lambda/The-Team-SP23-dev-getItem"
       }
     },
+    "GetByYearLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/The-Team-SP23-dev-getByYear"
+      }
+    },
+    "DeleteItemLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/The-Team-SP23-dev-deleteItem"
+      }
+    },
     "IamRoleLambdaExecution": {
       "Type": "AWS::IAM::Role",
       "Properties": {
@@ -188,7 +200,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/The-Team-SP23/dev/1677798315366-2023-03-02T23:05:15.366Z/The-Team-SP23.zip"
+          "S3Key": "serverless/The-Team-SP23/dev/1679279138981-2023-03-20T02:25:38.981Z/createPDT.zip"
         },
         "Handler": "createPDT.createPDT",
         "Runtime": "nodejs14.x",
@@ -220,7 +232,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/The-Team-SP23/dev/1677798315366-2023-03-02T23:05:15.366Z/The-Team-SP23.zip"
+          "S3Key": "serverless/The-Team-SP23/dev/1679279138981-2023-03-20T02:25:38.981Z/listItems.zip"
         },
         "Handler": "listItems.listItems",
         "Runtime": "nodejs14.x",
@@ -252,7 +264,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/The-Team-SP23/dev/1677798315366-2023-03-02T23:05:15.366Z/The-Team-SP23.zip"
+          "S3Key": "serverless/The-Team-SP23/dev/1679279138981-2023-03-20T02:25:38.981Z/getItem.zip"
         },
         "Handler": "getItem.getItem",
         "Runtime": "nodejs14.x",
@@ -277,34 +289,118 @@
         "GetItemLogGroup"
       ]
     },
-    "CreatePDTLambdaVersionL85nq6SltzeJ1ryT03sGzw16by9ljxKLiMdaVguPXhA": {
-      "Type": "AWS::Lambda::Version",
-      "DeletionPolicy": "Retain",
+    "GetByYearLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
       "Properties": {
-        "FunctionName": {
-          "Ref": "CreatePDTLambdaFunction"
+        "Code": {
+          "S3Bucket": {
+            "Ref": "ServerlessDeploymentBucket"
+          },
+          "S3Key": "serverless/The-Team-SP23/dev/1679279138981-2023-03-20T02:25:38.981Z/getByYear.zip"
         },
-        "CodeSha256": "uLmIXNg/DV0p+cxI9y6wX2b/vy39Avn4OOanP48/3Ok="
-      }
+        "Handler": "getByYear.getByYear",
+        "Runtime": "nodejs14.x",
+        "FunctionName": "The-Team-SP23-dev-getByYear",
+        "MemorySize": 1024,
+        "Timeout": 6,
+        "Environment": {
+          "Variables": {
+            "PERSONAL_TABLE": {
+              "Ref": "PersonalDevTable"
+            }
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "GetByYearLogGroup"
+      ]
     },
-    "ListItemsLambdaVersionZHhi5UaGq4IRJyDh5V9XqMIa1V5Q23EOCmVHCty8A": {
+    "DeleteItemLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "ServerlessDeploymentBucket"
+          },
+          "S3Key": "serverless/The-Team-SP23/dev/1679279138981-2023-03-20T02:25:38.981Z/deleteItem.zip"
+        },
+        "Handler": "deleteItem.delItem",
+        "Runtime": "nodejs14.x",
+        "FunctionName": "The-Team-SP23-dev-deleteItem",
+        "MemorySize": 1024,
+        "Timeout": 6,
+        "Environment": {
+          "Variables": {
+            "PERSONAL_TABLE": {
+              "Ref": "PersonalDevTable"
+            }
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "DeleteItemLogGroup"
+      ]
+    },
+    "ListItemsLambdaVersiondoR5rjL9Ef9wzODILVtSapYiTNeKbqG3EVk8srg0": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ListItemsLambdaFunction"
         },
-        "CodeSha256": "uLmIXNg/DV0p+cxI9y6wX2b/vy39Avn4OOanP48/3Ok="
+        "CodeSha256": "nHCFF56NvN7+tEJOSjCe0dZkUulomrdo3nu7G4HLA+Q="
       }
     },
-    "GetItemLambdaVersionxlV8NESIb98PgKRe858dBeRI9EDQIWpQwJqh2N0": {
+    "GetItemLambdaVersionWDx5TdGL9uADo4wJppsnLYJ33eV3fveCgWpYRMNGvU": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetItemLambdaFunction"
         },
-        "CodeSha256": "uLmIXNg/DV0p+cxI9y6wX2b/vy39Avn4OOanP48/3Ok="
+        "CodeSha256": "nHCFF56NvN7+tEJOSjCe0dZkUulomrdo3nu7G4HLA+Q="
+      }
+    },
+    "GetByYearLambdaVersion01Adft5pLHsZ1LTWvMja5EhZ2iU619LWd2JFkeX1Mw": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "GetByYearLambdaFunction"
+        },
+        "CodeSha256": "nHCFF56NvN7+tEJOSjCe0dZkUulomrdo3nu7G4HLA+Q="
+      }
+    },
+    "DeleteItemLambdaVersionwcVmkxb2DS7WadsKrL3JslPqVLXsRlqlKlR2ew4Eyw": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "DeleteItemLambdaFunction"
+        },
+        "CodeSha256": "nHCFF56NvN7+tEJOSjCe0dZkUulomrdo3nu7G4HLA+Q="
+      }
+    },
+    "CreatePDTLambdaVersionmPHGCerSBjYJjDuh7hqcuvbXwN2JeowNfOk90kW4jQU": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "CreatePDTLambdaFunction"
+        },
+        "CodeSha256": "T4FZzKVj3y4M+dUL0RtbrmGCs0qZCFtuA8EBG+L9sT4="
       }
     },
     "HttpApi": {
@@ -325,7 +421,8 @@
           "AllowMethods": [
             "OPTIONS",
             "POST",
-            "GET"
+            "GET",
+            "DELETE"
           ],
           "AllowOrigins": [
             "*"
@@ -550,13 +647,13 @@
         "TimeoutInMillis": 30000
       }
     },
-    "HttpApiRouteGetModelVarIdVar": {
+    "HttpApiRouteGetModelVarIdIdVar": {
       "Type": "AWS::ApiGatewayV2::Route",
       "Properties": {
         "ApiId": {
           "Ref": "HttpApi"
         },
-        "RouteKey": "GET /{model}/{id}",
+        "RouteKey": "GET /{model}/id/{id}",
         "Target": {
           "Fn::Join": [
             "/",
@@ -570,6 +667,156 @@
         }
       },
       "DependsOn": "HttpApiIntegrationGetItem"
+    },
+    "GetByYearLambdaPermissionHttpApi": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "GetByYearLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "HttpApi"
+              },
+              "/*"
+            ]
+          ]
+        }
+      }
+    },
+    "HttpApiIntegrationGetByYear": {
+      "Type": "AWS::ApiGatewayV2::Integration",
+      "Properties": {
+        "ApiId": {
+          "Ref": "HttpApi"
+        },
+        "IntegrationType": "AWS_PROXY",
+        "IntegrationUri": {
+          "Fn::GetAtt": [
+            "GetByYearLambdaFunction",
+            "Arn"
+          ]
+        },
+        "PayloadFormatVersion": "2.0",
+        "TimeoutInMillis": 30000
+      }
+    },
+    "HttpApiRouteGetModelVarYearYearVar": {
+      "Type": "AWS::ApiGatewayV2::Route",
+      "Properties": {
+        "ApiId": {
+          "Ref": "HttpApi"
+        },
+        "RouteKey": "GET /{model}/year/{year}",
+        "Target": {
+          "Fn::Join": [
+            "/",
+            [
+              "integrations",
+              {
+                "Ref": "HttpApiIntegrationGetByYear"
+              }
+            ]
+          ]
+        }
+      },
+      "DependsOn": "HttpApiIntegrationGetByYear"
+    },
+    "DeleteItemLambdaPermissionHttpApi": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "DeleteItemLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "HttpApi"
+              },
+              "/*"
+            ]
+          ]
+        }
+      }
+    },
+    "HttpApiIntegrationDeleteItem": {
+      "Type": "AWS::ApiGatewayV2::Integration",
+      "Properties": {
+        "ApiId": {
+          "Ref": "HttpApi"
+        },
+        "IntegrationType": "AWS_PROXY",
+        "IntegrationUri": {
+          "Fn::GetAtt": [
+            "DeleteItemLambdaFunction",
+            "Arn"
+          ]
+        },
+        "PayloadFormatVersion": "2.0",
+        "TimeoutInMillis": 30000
+      }
+    },
+    "HttpApiRouteDeleteModelVarIdIdVar": {
+      "Type": "AWS::ApiGatewayV2::Route",
+      "Properties": {
+        "ApiId": {
+          "Ref": "HttpApi"
+        },
+        "RouteKey": "DELETE /{model}/id/{id}",
+        "Target": {
+          "Fn::Join": [
+            "/",
+            [
+              "integrations",
+              {
+                "Ref": "HttpApiIntegrationDeleteItem"
+              }
+            ]
+          ]
+        }
+      },
+      "DependsOn": "HttpApiIntegrationDeleteItem"
     },
     "PersonalDevTable": {
       "Type": "AWS::DynamoDB::Table",
@@ -603,19 +850,10 @@
         "Name": "sls-The-Team-SP23-dev-ServerlessDeploymentBucketName"
       }
     },
-    "CreatePDTLambdaFunctionQualifiedArn": {
-      "Description": "Current Lambda function version",
-      "Value": {
-        "Ref": "CreatePDTLambdaVersionL85nq6SltzeJ1ryT03sGzw16by9ljxKLiMdaVguPXhA"
-      },
-      "Export": {
-        "Name": "sls-The-Team-SP23-dev-CreatePDTLambdaFunctionQualifiedArn"
-      }
-    },
     "ListItemsLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ListItemsLambdaVersionZHhi5UaGq4IRJyDh5V9XqMIa1V5Q23EOCmVHCty8A"
+        "Ref": "ListItemsLambdaVersiondoR5rjL9Ef9wzODILVtSapYiTNeKbqG3EVk8srg0"
       },
       "Export": {
         "Name": "sls-The-Team-SP23-dev-ListItemsLambdaFunctionQualifiedArn"
@@ -624,10 +862,37 @@
     "GetItemLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetItemLambdaVersionxlV8NESIb98PgKRe858dBeRI9EDQIWpQwJqh2N0"
+        "Ref": "GetItemLambdaVersionWDx5TdGL9uADo4wJppsnLYJ33eV3fveCgWpYRMNGvU"
       },
       "Export": {
         "Name": "sls-The-Team-SP23-dev-GetItemLambdaFunctionQualifiedArn"
+      }
+    },
+    "GetByYearLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "GetByYearLambdaVersion01Adft5pLHsZ1LTWvMja5EhZ2iU619LWd2JFkeX1Mw"
+      },
+      "Export": {
+        "Name": "sls-The-Team-SP23-dev-GetByYearLambdaFunctionQualifiedArn"
+      }
+    },
+    "DeleteItemLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "DeleteItemLambdaVersionwcVmkxb2DS7WadsKrL3JslPqVLXsRlqlKlR2ew4Eyw"
+      },
+      "Export": {
+        "Name": "sls-The-Team-SP23-dev-DeleteItemLambdaFunctionQualifiedArn"
+      }
+    },
+    "CreatePDTLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "CreatePDTLambdaVersionmPHGCerSBjYJjDuh7hqcuvbXwN2JeowNfOk90kW4jQU"
+      },
+      "Export": {
+        "Name": "sls-The-Team-SP23-dev-CreatePDTLambdaFunctionQualifiedArn"
       }
     },
     "HttpApiId": {
