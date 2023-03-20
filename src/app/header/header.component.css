@@ -2,6 +2,7 @@ div, mat-toolbar {
     background-color: black;
     padding-top: .5em;
     padding-bottom: .5em;
+    
 }
 .center{
     display: flex;
@@ -10,7 +11,8 @@ div, mat-toolbar {
 
 .hamburger{
     color: white;
-    background-color: black;
+    background-color: transparent
+    
 }
 
 .spacer {
@@ -19,7 +21,7 @@ div, mat-toolbar {
 
 .title {
     color: whitesmoke;
-    font-family: "Arial Black";
+    font-family: 'Roboto';
 }
 
 .user {
