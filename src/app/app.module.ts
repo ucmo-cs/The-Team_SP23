@@ -7,6 +7,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatTab } from '@angular/material/tabs';
+
 
 import { Header } from './header/header.component';
 import { Tabs } from './tabs/tabs.component';
@@ -15,12 +18,13 @@ import { PDPage } from './pages/PDP.component';
 import { AppComponent } from './app.component';
 import { MatCardModule } from '@angular/material/card';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     Header,
     Tabs,
-    PDPage
+    PDPage,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,9 @@ import { MatCardModule } from '@angular/material/card';
     MatMenuModule,
     MatTabsModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
