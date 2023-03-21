@@ -1,7 +1,7 @@
 
 
 <div class="container">
-    <mat-grid-list cols="2" rowHeight="2:0.5">
+    <mat-grid-list cols="2" rowHeight="1:0.5">
 
         <mat-grid-tile-header colspan="2">
             <h2>Personal Development Page</h2>
@@ -12,32 +12,56 @@
         </mat-grid-tile>
 
         <mat-grid-tile colspan="2">
-            <div style="min-width: 80%;">
-                <mat-grid-list cols="3" rowHeight="1:0.5">
-                    <mat-grid-tile> Short Term Goals </mat-grid-tile>
-                    <mat-grid-tile> Mid Term Goals </mat-grid-tile>
-                    <mat-grid-tile> Long Term Goals </mat-grid-tile>
+            <div style="min-width: 100%;">
+                <mat-grid-list cols="3">
+                    <mat-grid-tile id="Short Term Goals">
+                      <div>
+                        <body>Short Term Goals</body>
+                        <mat-form-field>
+                          <textarea matInput></textarea>
+                        </mat-form-field>
+                      </div>
+                    </mat-grid-tile>
+
+                    <mat-grid-tile id="Midterm Goals">
+                      <div width>
+                        <body>Mid-Term Goals (2-3 years)</body>
+                        <mat-form-field>
+                          <textarea matInput></textarea>
+                        </mat-form-field>
+                      </div>
+                    </mat-grid-tile>
+
+                    <mat-grid-tile id="Long Term Goals">
+                      <div>
+                        <body>Long Term Goals (5 years)</body>
+                        <mat-form-field>
+                          <textarea matInput></textarea>
+                        </mat-form-field>
+                      </div>
+                    </mat-grid-tile>
                 </mat-grid-list>
             </div>
         </mat-grid-tile>
 
-        <mat-grid-tile id="Developmental Needs" class="textareaC">
-              <mat-form-field>
-                <label>Dev needs</label>
-                <textarea matInput></textarea>
-              </mat-form-field>
 
-        </mat-grid-tile>
-
-        <mat-grid-tile id="Action Plan">
-          <mat-card>
-            <mat-card-title>
-              <h3>Action Plan</h3>
-            </mat-card-title>
+        <mat-grid-tile id="Development Needs">
+          <div>
+            <body>Development Needs</body>
             <mat-form-field>
               <textarea matInput></textarea>
             </mat-form-field>
-          </mat-card>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile id="Action Plan">
+          <div>
+            <body>Action Plan</body>
+            <mat-form-field>
+              <textarea matInput></textarea>
+            </mat-form-field>
+          </div>
+
         </mat-grid-tile>
 
         <mat-grid-tile colspan="2">
@@ -67,9 +91,4 @@
 
     </mat-grid-list>
 </div>
-
-<h5>Textarea</h5>
-    <mat-form-field>
-      <textarea matInput></textarea>
-    </mat-form-field>
 

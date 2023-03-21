@@ -1,20 +1,17 @@
 h2 {
     display: flex;
-    /*justify-content: center;*/
+    justify-content: center;
 }
 
 .container {
-    /* border: black solid 1px;*/
+    border: grey solid 1px;
     padding: 0px 10px 5px 10px;
 
 }
 
 mat-grid-tile {
-    /* border: rgb(90, 4, 4) solid 3px; */
-  height: fit-content;
+    /*border: rgb(90, 4, 4) solid 3px;*/
+    width: auto;
 }
 
-textareaC {
-  height: fit-content;
-  width: 50%;
-}
+
