@@ -12,6 +12,18 @@ h2 {
 mat-grid-tile {
     /*border: rgb(90, 4, 4) solid 3px;*/
     width: auto;
+    height: auto;
 }
 
+.textbox {
+    width: 100%;
+    height: 65%;
+    padding: 10px;
+    padding-top: 25%;
+
+    mat-form-field{
+        width: 100%;
+        min-height: auto;
+    }
+}
 
