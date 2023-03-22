@@ -9,9 +9,10 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
-@import './material/tabheader.scss';
+@import './material/global.scss';
 
 @include custom-tabs-theme();
+@include html-theme();
 
 $The-Team_SP23-primary: mat.define-palette(mat.$amber-palette);
 $The-Team_SP23-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
@@ -33,3 +34,4 @@ $The-Team_SP23-theme: mat.define-light-theme((
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($The-Team_SP23-theme);
+
