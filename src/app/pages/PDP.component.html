@@ -74,8 +74,17 @@
         <mat-grid-tile colspan="2">
             <div style="min-width: 80%;">
                 <mat-grid-list cols="4" rowHeight="1:0.5">
-                    <mat-grid-tile> Employee Signature </mat-grid-tile>
-                    <mat-grid-tile> Date Signed </mat-grid-tile>
+                    <mat-grid-tile> Employee Signature
+                      <input matInput>
+                    </mat-grid-tile>
+                    <mat-grid-tile id="Employee Date">
+                      <div>
+                        <input [matDatepicker]="picker">
+                        <mat-datepicker-toggle [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </div>
+
+                    </mat-grid-tile>
                     <mat-grid-tile> Supervisor Signature </mat-grid-tile>
                     <mat-grid-tile> Date Signed </mat-grid-tile>
                 </mat-grid-list>

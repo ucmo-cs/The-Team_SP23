@@ -8,8 +8,9 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { MatTab } from '@angular/material/tabs';
-
+import { MatNativeDateModule } from '@angular/material/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { Header } from './header/header.component';
 import { Tabs } from './tabs/tabs.component';
@@ -25,6 +26,7 @@ import { MatCardModule } from '@angular/material/card';
     Header,
     Tabs,
     PDPage,
+
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,11 @@ import { MatCardModule } from '@angular/material/card';
     MatToolbarModule,
     MatButtonModule,
     MatInputModule,
-    MatTabsModule
+    MatTabsModule,
+    FormsModule, ReactiveFormsModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
