@@ -1,7 +1,7 @@
 
 
 <div class="container">
-    <mat-grid-list cols="2" rowHeight="1:0.5">
+    <mat-grid-list cols="2" rowHeight="1.5:0.5">
 
         <mat-grid-tile-header colspan="2">
             <h2>Personal Development Page</h2>
@@ -18,7 +18,7 @@
                     <mat-grid-tile id="Short Term Goals">
 
                       <div class="textbox">
-                        <body>Short Term Goals</body>
+                        <mat-label>Short Term Goals</mat-label>
                         <mat-form-field >
                           <textarea matInput></textarea>
                         </mat-form-field>
@@ -29,7 +29,7 @@
                     <mat-grid-tile id="Midterm Goals">
 
                       <div class="textbox">
-                        <body>Mid-Term Goals (2-3 years)</body>
+                        <mat-label>Mid-Term Goals (2-3 years)</mat-label>
                         <mat-form-field >
                           <textarea matInput></textarea>
                         </mat-form-field>
@@ -40,12 +40,11 @@
                     <mat-grid-tile id="Long Term Goals">
 
                       <div class="textbox">
-                        <body>Long Term Goals (5 years)</body>
+                        <mat-label>Long Term Goals (5 years)</mat-label>
                         <mat-form-field>
                           <textarea matInput></textarea>
                         </mat-form-field>
                       </div>
-
                     </mat-grid-tile>
                 </mat-grid-list>
             </div>
@@ -54,7 +53,7 @@
 
         <mat-grid-tile id="Development Needs">
           <div class="textbox">
-            <body>Development Needs</body>
+            <mat-label>Development Needs</mat-label>
             <mat-form-field>
               <textarea matInput></textarea>
             </mat-form-field>
@@ -63,30 +62,54 @@
 
         <mat-grid-tile id="Action Plan">
           <div class="textbox">
-            <body>Action Plan</body>
+            <mat-label>Action Plan</mat-label>
             <mat-form-field>
               <textarea matInput></textarea>
             </mat-form-field>
           </div>
-
         </mat-grid-tile>
 
         <mat-grid-tile colspan="2">
-            <div style="min-width: 80%;">
+            <div style="min-width: 100%;">
                 <mat-grid-list cols="4" rowHeight="1:0.5">
-                    <mat-grid-tile> Employee Signature
-                      <input matInput>
+                    <mat-grid-tile id="Employee Signature">
+                      <div>
+                        <mat-label>Employee Signature</mat-label>
+                         <mat-form-field>
+                          <input matInput>
+                         </mat-form-field>
+                      </div>
                     </mat-grid-tile>
+
                     <mat-grid-tile id="Employee Date">
                       <div>
+                          <mat-label>Date Signed</mat-label>
+                          <div>
+                              <input [matDatepicker]="picker">
+                              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                              <mat-datepicker #picker></mat-datepicker>
+                          </div>
+                      </div>
+                    </mat-grid-tile>
+
+                    <mat-grid-tile id="Supervisor Signature">
+                      <div>
+                        <mat-label>Supervisor Signature</mat-label>
+                         <mat-form-field>
+                          <input matInput>
+                         </mat-form-field>
+                      </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                      <div>
+                      <mat-label>Date Signed</mat-label>
+                      <div>
                         <input [matDatepicker]="picker">
-                        <mat-datepicker-toggle [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker></mat-datepicker>
                       </div>
-
-                    </mat-grid-tile>
-                    <mat-grid-tile> Supervisor Signature </mat-grid-tile>
-                    <mat-grid-tile> Date Signed </mat-grid-tile>
+                   </div>
+                  </mat-grid-tile>
                 </mat-grid-list>
             </div>
         </mat-grid-tile>
