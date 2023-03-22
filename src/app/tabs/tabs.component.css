@@ -1,0 +1,16 @@
+mat-card {
+    margin: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+    height: 100%;
+    border-radius: 30px;
+    background-color: white;
+  }
+
+  mat-tab-group {
+    width: 75%;
+  }
