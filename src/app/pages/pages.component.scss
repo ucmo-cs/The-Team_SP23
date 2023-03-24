@@ -1,6 +1,7 @@
 h2 {
     display: flex;
     justify-content: center;
+    margin-top: 2em;
 }
 
 .container {
@@ -17,13 +18,23 @@ mat-grid-tile {
 
 .textbox {
     width: 100%;
-    height: 65%;
-    padding: 10px;
-    padding-top: 25%;
+    padding: 5px;
+    
+
+    mat-label{
+        font-size: small;
+        color: grey;
+    }
 
     mat-form-field{
-        width: 100%;
-        min-height: auto;
+        width: 90%;
+        max-height: 9em;
+        outline: 1px solid black;
+
+        textarea{
+            max-height: 99px;
+            min-height: 50px;
+        }
     }
 }
 
