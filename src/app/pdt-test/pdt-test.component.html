@@ -12,7 +12,7 @@
                       <div>
                         <body>ID</body>
                         <mat-form-field>
-                          <input matInput placeholder="Insert ID" #input2 [(ngModel)]='id'>
+                          <input matInput placeholder="Insert ID " #input2 [(ngModel)]='id'>
                         </mat-form-field>
                       </div>
                     </mat-grid-tile>
@@ -40,7 +40,7 @@
                       <div>
                         <body>Year</body>
                         <mat-form-field>
-                          <input matInput placeholder="Insert ID" #input2 [(ngModel)]='id'>
+                          <input matInput placeholder="Insert ID" #input1 [(ngModel)]='idDel'>
                         </mat-form-field>
                       </div>
                     </mat-grid-tile>
@@ -50,7 +50,7 @@
                             <mat-grid-list cols="1" rowHeight="1:0.25">
                                 <mat-grid-tile></mat-grid-tile>
                                 <mat-grid-tile>
-                                    <button mat-flat-button color="primary" (click)="doDelPDTById(id)">Del By ID</button>
+                                    <button mat-flat-button color="primary" (click)="doDelPDTById(idDel)">Del By ID</button>
                                 </mat-grid-tile>
                             </mat-grid-list>
                         </div>

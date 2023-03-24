@@ -13,6 +13,7 @@ import { PDT } from "../models/pdt";
 
   export class PdtTestComponent implements OnInit {
     id = '';
+    idDel = '';
     year = '';
 
     displayedColumns = ['ID', 'Date', 'Time Stamp', 'Name', 'Short Term Goals', 'Medium Term Goals', 'Long Term Goals', 'Development Needs', 'Action Plan',  'Emp Signature', 'Super Signature'];
