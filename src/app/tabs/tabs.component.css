@@ -13,4 +13,5 @@ mat-card {
 
   mat-tab-group {
     width: 75%;
+    height: 100%;
   }
