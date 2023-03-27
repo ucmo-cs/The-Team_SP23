@@ -5,7 +5,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatGridListModule} from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule} from '@angular/material/select';
@@ -14,9 +13,13 @@ import { MatCardModule } from '@angular/material/card';
 
 import { Header } from './header/header.component';
 import { Tabs } from './tabs/tabs.component';
-import { PDPage } from './pages/PDP.component';
 
 import { AppComponent } from './app.component';
+import { SelectComponent } from './select/select.component';
+import { PDPComponent } from './pdp/pdp.component';
+import { SAComponent } from './sa/sa.component';
+import { PEComponent } from './pe/pe.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -24,7 +27,10 @@ import { AppComponent } from './app.component';
     AppComponent,
     Header,
     Tabs,
-    PDPage
+    SelectComponent,
+    PDPComponent,
+    SAComponent,
+    PEComponent
   ],
   imports: [
     BrowserModule,
@@ -35,9 +41,9 @@ import { AppComponent } from './app.component';
     MatGridListModule,
     MatIconModule,
     MatMenuModule,
-    MatTabsModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
