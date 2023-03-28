@@ -1,29 +1,16 @@
 <div style="padding-bottom: 1em;">
   <mat-card>
-
     <mat-card-header>
       <mat-card-title>
         <h1>Employee Development</h1>
       </mat-card-title>
-
     </mat-card-header>
-
-      <mat-tab-group dynamicHeight="true">
-        <mat-tab label="Personal Development Page">
-          <pdpage></pdpage>
-        </mat-tab>
-
-        <mat-tab label="Personal Development Page Test">
-          <pdppage-test> </pdppage-test>
-        </mat-tab>
-
-        <mat-tab label="Performance Evaluation">
-          Content 3
-        </mat-tab>
-
-      </mat-tab-group>
-
-      <span style="padding-top: 3em; min-width: 80%;"></span>
+    <nav>
+      <button class="tabs" type="button" routerLink="/personal-dev" routerLinkActive="active" ariaCurrentWhenActive="page">Personal Development Plan</button>
+      <button class="tabs" type="button" routerLink="/self-assess" routerLinkActive="active" ariaCurrentWhenActive="page">Self Assessment</button>
+      <button class="tabs" type="button" routerLink="/performance-eval" routerLinkActive="active" ariaCurrentWhenActive="page">Performance Evaluation</button>
+    </nav>
+    <router-outlet></router-outlet>
 
   </mat-card>
 </div>

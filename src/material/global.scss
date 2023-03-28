@@ -1,0 +1,23 @@
+@use "@angular/material" as mat;
+
+@mixin custom-tabs-theme() {
+  .mcd-tab--active {
+    border-width: 9px;
+    border-style: solid;
+    border-color: orange;
+    background-color: black;
+  }
+}
+
+@mixin html-theme() {
+  html {
+    background-color: orange; /* fallback color */
+    background-image: linear-gradient(to bottom right, #fbd333, #ef9d33);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  body {
+    margin: 0px;
+  }
+}
