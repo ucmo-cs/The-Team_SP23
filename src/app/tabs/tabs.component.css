@@ -2,19 +2,16 @@ mat-card {
     margin: 50px;
     margin-left: 5%;
     margin-right: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: 'Roboto';
     height: 100%;
     border-radius: 30px;
     background-color: white;
   }
-
-  mat-tab-group {
-    width: 75%;
-    height: 100%;
+  .nav {
+    display: flex;
+    justify-content: center;
   }
+  
   .tabs {
     background-color: white;
     border-top: 1px solid #ef9d33;
