@@ -35,8 +35,20 @@ functions:
     handler: getItem.getItem
     events:
       - httpApi:
-          path: /{model}/{id}
+          path: /{model}/id/{id}
           method: GET
+  getByYear:
+    handler: getByYear.getByYear
+    events:
+      - httpApi:
+          path: /{model}/year/{year}
+          method: GET
+  deleteItem:
+    handler: deleteItem.delItem
+    events:
+      - httpApi:
+          path: /{model}/id/{id}
+          method: DELETE
 
 resources:
   Resources:
@@ -53,3 +65,23 @@ resources:
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
+
+plugins:
+  - serverless-plugin-common-excludes
+  - serverless-plugin-include-dependencies
+  - serverless-dynamodb-local
+  - serverless-offline
+
+package:
+  individually: true
+  excludeDevDependencies: false
+
+custom:
+  dynamodb:
+    stages:
+      - ${opt:stage, 'dev'}
+    start:
+      docker: true
+      port: 8000
+      inMemory: true
+      migrate: true

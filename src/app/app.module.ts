@@ -1,49 +1,59 @@
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { MatGridListModule} from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatTabsModule } from '@angular/material/tabs';
+import { MatTableModule } from "@angular/material/table";
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { MatNativeDateModule } from '@angular/material/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule} from '@angular/material/select';
+import { MatCardModule } from '@angular/material/card';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { Header } from './header/header.component';
 import { Tabs } from './tabs/tabs.component';
-import { PDPage } from './pages/PDP.component';
 
 import { AppComponent } from './app.component';
-import { MatCardModule } from '@angular/material/card';
-
+import { PdtTestComponent } from './pdt-test/pdt-test.component';
+import { SelectComponent } from './select/select.component';
+import { PDPComponent } from './pdp/pdp.component';
+import { SAComponent } from './sa/sa.component';
+import { PEComponent } from './pe/pe.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     Header,
     Tabs,
-    PDPage,
-
+    PdtTestComponent,
+    SelectComponent,
+    PDPComponent,
+    SAComponent,
+    PEComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    MatInputModule,
+    MatTableModule,
     BrowserAnimationsModule,
+    MatSelectModule,
+    MatInputModule,
     MatCardModule,
     MatGridListModule,
     MatIconModule,
     MatMenuModule,
-    MatTabsModule,
     MatToolbarModule,
     MatButtonModule,
-    MatInputModule,
-    MatTabsModule,
-    FormsModule, ReactiveFormsModule,
-    MatNativeDateModule,
-    MatDatepickerModule,
-
+    HttpClientModule,
+    AppRoutingModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
