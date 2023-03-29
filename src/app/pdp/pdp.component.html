@@ -1,5 +1,5 @@
 <div class="container">
-    <mat-grid-list cols="2" rowHeight="2:0.5">
+  <mat-grid-list cols="2" rowHeight="1.5:0.5">
 
         <mat-grid-tile-header colspan="2">
             <h2>Personal Development Plan</h2>
@@ -9,48 +9,126 @@
             <span><app-select></app-select></span>
         </mat-grid-tile>
 
-        <mat-grid-tile colspan="2">
-            <div style="min-width: 80%;">
-                <mat-grid-list cols="3" rowHeight="1:0.5">
-                    <mat-grid-tile> Short Term Goals </mat-grid-tile>
-                    <mat-grid-tile> Mid Term Goals </mat-grid-tile>
-                    <mat-grid-tile> Long Term Goals </mat-grid-tile>
-                </mat-grid-list>
+    <mat-grid-tile colspan="2">
+      <div style="min-width: 100%;">
+
+        <mat-grid-list cols="3">
+          <mat-grid-tile id="Short Term Goals">
+
+            <div class="textbox">
+              <mat-label>Short Term Goals</mat-label>
+              <mat-form-field subscriptSizing="dynamic">
+                <textarea matInput></textarea>
+              </mat-form-field>
             </div>
-        </mat-grid-tile>
 
-        <mat-grid-tile>
-            Development Needs
-        </mat-grid-tile>
+          </mat-grid-tile>
 
-        <mat-grid-tile>
-            Action Plan
-        </mat-grid-tile>
+          <mat-grid-tile id="Midterm Goals">
 
-        <mat-grid-tile colspan="2">
-            <div style="min-width: 80%;">
-                <mat-grid-list cols="4" rowHeight="1:0.5">
-                    <mat-grid-tile> Employee Signature </mat-grid-tile>
-                    <mat-grid-tile> Date Signed </mat-grid-tile>
-                    <mat-grid-tile> Supervisor Signature </mat-grid-tile>
-                    <mat-grid-tile> Date Signed </mat-grid-tile>
-                </mat-grid-list>
+            <div class="textbox">
+              <mat-label>Mid-Term Goals (2-3 years)</mat-label>
+              <mat-form-field subscriptSizing="dynamic">
+                <textarea matInput></textarea>
+              </mat-form-field>
             </div>
-        </mat-grid-tile>
 
-        <mat-grid-tile></mat-grid-tile>
-        <mat-grid-tile style="float: right;">
-            <div style="min-width: 80%;">
-                <mat-grid-list cols="2" rowHeight="1:0.25">
-                    <mat-grid-tile></mat-grid-tile>
-                    <mat-grid-tile> 
-                        <button mat-flat-button color="primary">Export</button>
-                        <button mat-flat-button>Save</button>    
-                    </mat-grid-tile>
-                </mat-grid-list>
+          </mat-grid-tile>
+
+          <mat-grid-tile id="Long Term Goals">
+
+            <div class="textbox">
+              <mat-label>Long Term Goals (5 years)</mat-label>
+              <mat-form-field subscriptSizing="dynamic">
+                <textarea matInput></textarea>
+              </mat-form-field>
             </div>
-        </mat-grid-tile>
-        
 
-    </mat-grid-list>
+          </mat-grid-tile>
+
+        </mat-grid-list>
+      </div>
+    </mat-grid-tile>
+
+
+    <mat-grid-tile id="Development Needs">
+      <div class="textbox">
+        <mat-label>Development Needs</mat-label>
+        <mat-form-field subscriptSizing="dynamic">
+          <textarea matInput></textarea>
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile id="Action Plan">
+      <div class="textbox">
+        <mat-label>Action Plan</mat-label>
+        <mat-form-field subscriptSizing="dynamic">
+          <textarea matInput></textarea>
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="2">
+      <div style="min-width: 100%;">
+        <mat-grid-list cols="4" rowHeight="1:0.5">
+
+          <mat-grid-tile id="Employee Signature">
+            <div class="textbox">
+              <mat-label>Employee Signature</mat-label>
+              <mat-form-field subscriptSizing="dynamic">
+                <input matInput>
+              </mat-form-field>
+            </div>
+          </mat-grid-tile>
+
+          <mat-grid-tile id="Employee Date">
+            <div>
+              <mat-label>Date Signed</mat-label>
+              <div>
+                <input [matDatepicker]="picker">
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </div>
+            </div>
+          </mat-grid-tile>
+
+          <mat-grid-tile id="Supervisor Signature">
+            <div class="textbox">
+              <mat-label>Supervisor Signature</mat-label>
+              <mat-form-field subscriptSizing="dynamic">
+                <input matInput>
+              </mat-form-field>
+            </div>
+          </mat-grid-tile>
+
+          <mat-grid-tile>
+            <div>
+              <mat-label>Date Signed</mat-label>
+              <div>
+                <input [matDatepicker]="picker">
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </div>
+            </div>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile></mat-grid-tile>
+    <mat-grid-tile style="float: right;">
+      <div style="min-width: 80%;">
+        <mat-grid-list cols="2">
+          <mat-grid-tile></mat-grid-tile>
+          <mat-grid-tile>
+            <button mat-flat-button color="primary">Export</button>
+            <button mat-flat-button>Save</button>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+    </mat-grid-tile>
+
+
+  </mat-grid-list>
 </div>

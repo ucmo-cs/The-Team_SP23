@@ -1,5 +1,5 @@
 mat-card {
-    margin: 50px;
+    margin: 20px;
     margin-left: 5%;
     margin-right: 5%;
     font-family: 'Roboto';
@@ -27,7 +27,13 @@ mat-card {
     transition-duration: 0.4s;
 }
 
+<<<<<<< HEAD
+  mat-tab-group {
+    width: 75%;
+  }
+=======
 .active, .tabs:hover {
     background-color: #ef9d33;
     color: white;
 }
+>>>>>>> dev

@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule} from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { Header } from './header/header.component';
 import { Tabs } from './tabs/tabs.component';
@@ -51,7 +52,8 @@ import { AppRoutingModule } from './app-routing.module';
     MatToolbarModule,
     MatButtonModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
