@@ -14,6 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule} from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 import { Header } from './header/header.component';
 import { Tabs } from './tabs/tabs.component';
@@ -53,7 +54,8 @@ import { AppRoutingModule } from './app-routing.module';
     MatButtonModule,
     HttpClientModule,
     AppRoutingModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
