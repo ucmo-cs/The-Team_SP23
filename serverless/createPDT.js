@@ -3,6 +3,14 @@
 const uuid = require('uuid')
 const AWS = require('aws-sdk')
 
+let options = {}
+if (process.env.IS_OFFLINE) {
+    options = {
+      region: 'localhost',
+      endpoint: 'http://localhost:8000'
+    }
+}
+
 const db = new AWS.DynamoDB.DocumentClient()
 const TableName = process.env.PERSONAL_TABLE
 
@@ -25,7 +33,7 @@ exports.createPDT = async (event, context, callback) => {
   let MM = addZero(d.getMonth()+1);
   let dd = addZero(d.getDate());
   let y = d.getFullYear();
-  let dt = y + '/' + MM + '/' + dd;
+  let dt = y + '-' + MM + '-' + dd;
 
   const params = {
     TableName,
