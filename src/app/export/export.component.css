@@ -1,0 +1,19 @@
+.export {
+    background-color: white;
+    color: #ef9d33;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: small;
+    font-weight: bold;
+    border-radius: 50px;
+    border: 2px solid #ef9d33;
+    transition-duration: 0.4s;
+}
+
+.export:hover {
+    background-color: #ef9d33;
+    color: white;
+    border-color: transparent;
+}
