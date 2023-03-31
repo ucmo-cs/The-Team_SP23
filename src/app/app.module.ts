@@ -18,8 +18,13 @@ import { MatNativeDateModule } from '@angular/material/core';
 
 import { Header } from './header/header.component';
 import { Tabs } from './tabs/tabs.component';
+import { SaveComponent } from './save/save.component';
+import { ExportComponent } from './export/export.component';
+import { DeleteComponent } from './delete/delete.component';
+import { AddComponent } from './add/add.component';
 
 import { AppComponent } from './app.component';
+
 import { PdtTestComponent } from './pdt-test/pdt-test.component';
 import { SelectComponent } from './select/select.component';
 import { PDPComponent } from './pdp/pdp.component';
@@ -30,6 +35,9 @@ import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
+    SaveComponent,
+    ExportComponent,
+    DeleteComponent,
     Header,
     Tabs,
     PdtTestComponent,
