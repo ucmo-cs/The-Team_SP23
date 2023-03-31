@@ -2,6 +2,14 @@
 
 const AWS = require("aws-sdk")
 
+let options = {}
+if (process.env.IS_OFFLINE) {
+    options = {
+      region: 'localhost',
+      endpoint: 'http://localhost:8000'
+    }
+}
+
 const db = new AWS.DynamoDB.DocumentClient()
 const tablePDV = process.env.PERSONAL_TABLE
 
@@ -15,13 +23,14 @@ exports.listItems = async (event, context, callback) => {
     console.log("EVENT:::", JSON.stringify(event));
 
     const tableName = event.pathParameters.model
+    let year = event.pathParameters.year;
     let table;
     switch (tableName) {
         case "PDT":
-            table = tablePDV;
+            table = "PersonalDevTable";
             break;
         default:
-            throw new Error(`Unsupported resource: "${modelName}"`);
+            throw new Error(`Unsupported resource: "${tableName}"`);
     }
 
     const params = {
@@ -41,6 +50,7 @@ exports.listItems = async (event, context, callback) => {
             headers,
             body: JSON.stringify(data.Items)
         }
+
         callback(null, response);
     }).promise();
 

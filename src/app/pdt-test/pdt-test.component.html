@@ -1,0 +1,166 @@
+<div class="container">
+    <mat-grid-list cols="2" rowHeight="1:0.5">
+
+        <mat-grid-tile-header colspan="2">
+            <h2>Personal Development Page Test</h2>
+        </mat-grid-tile-header>
+
+        <mat-grid-tile colspan="1">
+            <div style="min-width: 100%;">
+                <mat-grid-list cols="2">
+                    <mat-grid-tile id="Get By ID">
+                      <div>
+                        <body>ID</body>
+                        <mat-form-field>
+                          <input matInput placeholder="Insert ID " #input2 [(ngModel)]='id'>
+                        </mat-form-field>
+                      </div>
+                    </mat-grid-tile>
+
+                    <mat-grid-tile style="float: right;">
+                        <div style="min-width: 80%;">
+                            <mat-grid-list cols="1" rowHeight="1:0.25">
+                                <mat-grid-tile></mat-grid-tile>
+                                <mat-grid-tile>
+                                    <button mat-flat-button color="primary" (click)="doGetPDTById(id)">Get By ID</button>
+                                </mat-grid-tile>
+                            </mat-grid-list>
+                        </div>
+                    </mat-grid-tile>
+                    
+
+                </mat-grid-list>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile colspan="1">
+            <div style="min-width: 100%;">
+                <mat-grid-list cols="2">
+                    <mat-grid-tile id="Del By Year">
+                      <div>
+                        <body>Year</body>
+                        <mat-form-field>
+                          <input matInput placeholder="Insert ID" #input1 [(ngModel)]='idDel'>
+                        </mat-form-field>
+                      </div>
+                    </mat-grid-tile>
+
+                    <mat-grid-tile style="float: right;">
+                        <div style="min-width: 80%;">
+                            <mat-grid-list cols="1" rowHeight="1:0.25">
+                                <mat-grid-tile></mat-grid-tile>
+                                <mat-grid-tile>
+                                    <button mat-flat-button color="primary" (click)="doDelPDTById(idDel)">Del By ID</button>
+                                </mat-grid-tile>
+                            </mat-grid-list>
+                        </div>
+                    </mat-grid-tile>
+                    
+
+                </mat-grid-list>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile colspan="1">
+            <div style="min-width: 100%;">
+                <mat-grid-list cols="2">
+                    <mat-grid-tile id="Get by Year">
+                      <div>
+                        <body>Year</body>
+                        <mat-form-field>
+                          <input matInput placeholder="Insert Year" #input2 [(ngModel)]='year'>
+                        </mat-form-field>
+                      </div>
+                    </mat-grid-tile>
+
+                    <mat-grid-tile style="float: right;">
+                        <div style="min-width: 80%;">
+                            <mat-grid-list cols="1" rowHeight="1:0.25">
+                                <mat-grid-tile></mat-grid-tile>
+                                <mat-grid-tile>
+                                    <button mat-flat-button color="primary" (click)="doGetPDTByYear(year)">Get By Year</button>
+                                </mat-grid-tile>
+                            </mat-grid-list>
+                        </div>
+                    </mat-grid-tile>
+                    
+
+                </mat-grid-list>
+            </div>
+        </mat-grid-tile>
+
+
+        <mat-grid-tile style="float: right;">
+            <div style="min-width: 80%;">
+                <mat-grid-list cols="1" rowHeight="1:0.25">
+                    <mat-grid-tile></mat-grid-tile>
+                    <mat-grid-tile>
+                        <button mat-flat-button color="primary" (click)="doGetPDTList()">Get List</button>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </div>
+        </mat-grid-tile>
+
+            
+        <mat-grid-tile colspan="2">
+            <mat-table #table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                <ng-container matColumnDef="ID">
+                  <th mat-header-cell *matHeaderCellDef> ID </th>
+                  <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="Date">
+                  <th mat-header-cell *matHeaderCellDef> Date </th>
+                  <td mat-cell *matCellDef="let element"> {{element.createdDate}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="Time Stamp">
+                  <th mat-header-cell *matHeaderCellDef> Time Stamp </th>
+                  <td mat-cell *matCellDef="let element"> {{element.createdTimestamp}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="Name">
+                  <th mat-header-cell *matHeaderCellDef> Name </th>
+                  <td mat-cell *matCellDef="let element"> {{element.empName}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Short Term Goals">
+                    <th mat-header-cell *matHeaderCellDef> Short Term Goals </th>
+                    <td mat-cell *matCellDef="let element"> {{element.shortTermGoals}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="Medium Term Goals">
+                    <th mat-header-cell *matHeaderCellDef> Medium Term Goals </th>
+                    <td mat-cell *matCellDef="let element"> {{element.mediumTermGoals}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="Long Term Goals">
+                    <th mat-header-cell *matHeaderCellDef> Long Term Goals </th>
+                    <td mat-cell *matCellDef="let element"> {{element.longTermGoals}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="Development Needs">
+                    <th mat-header-cell *matHeaderCellDef> Development Needs </th>
+                    <td mat-cell *matCellDef="let element"> {{element.developmentNeeds}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="Action Plan">
+                    <th mat-header-cell *matHeaderCellDef> Action Plan </th>
+                    <td mat-cell *matCellDef="let element"> {{element.actionPlan}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="Emp Signature">
+                    <th mat-header-cell *matHeaderCellDef> Emp Signature </th>
+                    <td mat-cell *matCellDef="let element"> {{element.empSignature}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="Super Signature">
+                    <th mat-header-cell *matHeaderCellDef> Super Signature </th>
+                    <td mat-cell *matCellDef="let element"> {{element.superSignature}} </td>
+                  </ng-container>
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </mat-table>
+        </mat-grid-tile>

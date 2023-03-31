@@ -1,0 +1,31 @@
+div{
+    background-color: black;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.hamburger{
+    color: white;
+    background-color: transparent
+    
+}
+
+.spacer {
+    flex: .5 1 auto;
+}
+
+.title {
+    color: whitesmoke;
+    font-family: 'Roboto';
+}
+
+.user {
+    background-color: white;
+    border-radius: 10px;
+    padding: 3px;
+}

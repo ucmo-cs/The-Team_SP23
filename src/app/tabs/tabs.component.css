@@ -1,0 +1,33 @@
+mat-card {
+    margin: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: 'Roboto';
+    height: 100%;
+    border-radius: 30px;
+    background-color: white;
+  }
+  .nav {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .tabs {
+    background-color: white;
+    border-top: 1px solid #ef9d33;
+    border-left: 1px solid #ef9d33;
+    border-right: 1px solid #ef9d33;
+    border-bottom: 1px solid gray;
+    color: #ef9d33;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+}
+
+.active, .tabs:hover {
+    background-color: #ef9d33;
+    color: white;
+}
