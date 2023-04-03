@@ -32,6 +32,7 @@ import { SAComponent } from './sa/sa.component';
 import { PEComponent } from './pe/pe.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ComponentBiggesttakeawayComponent } from './component-biggesttakeaway/component-biggesttakeaway.component';
+import { ComponentBarriersorhurdlesComponent } from './component-barriersorhurdles/component-barriersorhurdles.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ComponentBiggesttakeawayComponent } from './component-biggesttakeaway/c
     PDPComponent,
     SAComponent,
     PEComponent,
-    ComponentBiggesttakeawayComponent
+    ComponentBiggesttakeawayComponent,
+    ComponentBarriersorhurdlesComponent
   ],
   imports: [
     BrowserModule,
