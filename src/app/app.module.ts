@@ -31,6 +31,7 @@ import { PDPComponent } from './pdp/pdp.component';
 import { SAComponent } from './sa/sa.component';
 import { PEComponent } from './pe/pe.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ComponentBiggesttakeawayComponent } from './component-biggesttakeaway/component-biggesttakeaway.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { AppRoutingModule } from './app-routing.module';
     SelectComponent,
     PDPComponent,
     SAComponent,
-    PEComponent
+    PEComponent,
+    ComponentBiggesttakeawayComponent
   ],
   imports: [
     BrowserModule,
