@@ -4,13 +4,15 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { AppComponent } from './app.component';
 import { ComponentViewYearComponent } from './component-view-year/component-view-year.component';
 import { ComponentSupporttheimprovementComponent } from './component-supporttheimprovement/component-supporttheimprovement.component';
+import { ComponentSupportTheImprovementComponent } from './component-support-the-improvement/component-support-the-improvement.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ComponentViewYearComponent,
-    ComponentSupporttheimprovementComponent
+    ComponentSupporttheimprovementComponent,
+    ComponentSupportTheImprovementComponent
   ],
   imports: [
     
