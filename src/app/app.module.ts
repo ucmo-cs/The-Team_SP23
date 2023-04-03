@@ -8,7 +8,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from "@angular/material/table";
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule} from '@angular/material/select';
@@ -17,6 +17,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 
 import { Header } from './header/header.component';
+import { Login } from './login/login.component';
 import { Tabs } from './tabs/tabs.component';
 
 import { AppComponent } from './app.component';
@@ -31,6 +32,7 @@ import { AppRoutingModule } from './app-routing.module';
   declarations: [
     AppComponent,
     Header,
+    Login,
     Tabs,
     PdtTestComponent,
     SelectComponent,
@@ -55,7 +57,8 @@ import { AppRoutingModule } from './app-routing.module';
     HttpClientModule,
     AppRoutingModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
