@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
 import { AppComponent } from './app.component';
+import { ComponentViewYearComponent } from './component-view-year/component-view-year.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ComponentViewYearComponent
   ],
   imports: [
-    BrowserModule
+    
+    BrowserModule,
+    MatDatepickerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
