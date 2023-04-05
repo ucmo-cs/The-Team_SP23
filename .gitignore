@@ -42,6 +42,6 @@ testem.log
 Thumbs.db
 
 #serverless
-/serverless/.serverless
-/serverless/.dynamodb
-/serverless/node_modules
+serverless/.serverless/
+serverless/.dynamodb/
+serverless/node_modules/
