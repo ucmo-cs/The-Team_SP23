@@ -1,7 +1,12 @@
 .box {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
+  display: flex;
+  justify-content: center;
+
+}
+
+.box span{
+  float: left;
+  margin: 0 5px;
 }
 
 h2 {

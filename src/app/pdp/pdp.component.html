@@ -6,80 +6,84 @@
       <span><app-select></app-select></span>
     </section>  <div style="clear:both;">&nbsp;</div>
 
+</div>
 
-      <section class="box"> <!--Name, Date Completed, 6-month check in-->
-        <div style="float:inline-start">
-          <mat-label>Employee Name</mat-label>
-          <mat-form-field class="textinput">
-            <input matInput>
-          </mat-form-field>
-        </div>
+      <section> <!--Name, Date Completed, 6-month check in-->
+<div class="box">
+  <span>
+    <mat-label>Employee Name</mat-label>
+    <mat-form-field class="textinput">
+      <input matInput>
+    </mat-form-field>
+  </span>
 
-        <div style="float:inline-start">
-          <mat-label>Date Completed         </mat-label>
-          <mat-form-field appearance="fill"  style="outline: none">
-            <input matInput [matDatepicker]="completed" placeholder="MM/DD/YYYY">
-            <mat-datepicker-toggle matIconSuffix [for]="completed"></mat-datepicker-toggle>
-            <mat-datepicker #completed></mat-datepicker>
-          </mat-form-field>
+  <span>
+    <mat-label>Date Completed         </mat-label>
+    <mat-form-field appearance="fill"  style="outline: none">
+      <input matInput [matDatepicker]="completed" placeholder="MM/DD/YYYY">
+      <mat-datepicker-toggle matIconSuffix [for]="completed"></mat-datepicker-toggle>
+      <mat-datepicker #completed></mat-datepicker>
+    </mat-form-field>
+  </span>
 
-        </div>
-
-        <div style="float:inline-start">
-          <mat-label>6-Month Check-In         </mat-label>
-          <mat-form-field appearance="fill" style="outline: none">
-            <input matInput [matDatepicker]="checkin" placeholder="MM/DD/YYYY">
-            <mat-datepicker-toggle matIconSuffix [for]="checkin"></mat-datepicker-toggle>
-            <mat-datepicker #checkin></mat-datepicker>
-          </mat-form-field>
-        </div>
+  <span>
+    <mat-label>6-Month Check-In         </mat-label>
+    <mat-form-field appearance="fill" style="outline: none">
+      <input matInput [matDatepicker]="checkin" placeholder="MM/DD/YYYY">
+      <mat-datepicker-toggle matIconSuffix [for]="checkin"></mat-datepicker-toggle>
+      <mat-datepicker #checkin></mat-datepicker>
+    </mat-form-field>
+  </span>
+</div>
 
       </section>  <div style="clear:both;">&nbsp;</div>
 
 
       <section> <!--Goals-->
-        <div style="display: flex; align-items: center;">
-          <div class="textbox" style="float:inline-start">
+        <div class="box">
+          <span class="textbox">
             <mat-label>Short Term Goals</mat-label>
             <mat-form-field subscriptSizing="dynamic">
               <textarea matInput></textarea>
             </mat-form-field>
-          </div>
+          </span>
 
 
-            <div class="textbox" style="float:inline-start">
+            <span class="textbox">
               <mat-label>Mid-Term Goals (2-3 years)</mat-label>
               <mat-form-field subscriptSizing="dynamic">
                 <textarea matInput></textarea>
               </mat-form-field>
-            </div>
+            </span>
 
-            <div class="textbox" style="float:inline-start">
+            <span class="textbox">
               <mat-label>Long Term Goals (5 years)</mat-label>
               <mat-form-field subscriptSizing="dynamic">
                 <textarea matInput></textarea>
               </mat-form-field>
-            </div>
+            </span>
         </div>
 
       </section>  <div style="clear:both;">&nbsp;</div>
 
 
       <section> <!--Dev Needs, Action Plan-->
-        <div class="textbox" style="float: inline-start">
-          <mat-label>Development Needs</mat-label>
-          <mat-form-field subscriptSizing="dynamic">
-            <textarea matInput></textarea>
-          </mat-form-field>
-        </div>
+        <div class="box">
+          <span class="textbox">
+            <mat-label>Development Needs</mat-label>
+            <mat-form-field subscriptSizing="dynamic">
+              <textarea matInput></textarea>
+            </mat-form-field>
+          </span>
 
-        <div class="textbox" style="float: inline-start">
-          <mat-label>Action Plan             </mat-label>
-          <mat-form-field subscriptSizing="dynamic">
-            <textarea matInput></textarea>
-          </mat-form-field>
-        </div>
+          <span class="textbox">
+            <mat-label>Action Plan             </mat-label>
+            <mat-form-field subscriptSizing="dynamic">
+              <textarea matInput></textarea>
+            </mat-form-field>
+          </span>
 
+        </div>
       </section>  <div style="clear:both;">&nbsp;</div>
 
 
@@ -129,5 +133,4 @@
 
   </section>  <div style="clear:both;">&nbsp;</div>
 
-</div>
 </div>
