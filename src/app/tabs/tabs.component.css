@@ -11,7 +11,7 @@ mat-card {
     display: flex;
     justify-content: center;
   }
-  
+
   .tabs {
     background-color: white;
     border-top: 1px solid #ef9d33;
@@ -31,3 +31,4 @@ mat-card {
     background-color: #ef9d33;
     color: white;
 }
+

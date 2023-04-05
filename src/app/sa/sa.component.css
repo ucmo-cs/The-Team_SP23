@@ -1,0 +1,12 @@
+#accomplishments ul li {
+  list-style: none;
+  margin: 0 20px;
+  width: 100%;
+}
+
+.container {
+  border: grey solid 1px;
+  padding: 0px 10px 5px 10px;
+}
+
+

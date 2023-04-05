@@ -62,7 +62,7 @@
 
     <mat-grid-tile id="Action Plan">
       <div class="textbox">
-        <mat-label>Action Plan</mat-label>
+        <mat-label>Action Plan             </mat-label>
         <mat-form-field subscriptSizing="dynamic">
           <textarea matInput></textarea>
         </mat-form-field>
@@ -86,9 +86,9 @@
             <div>
               <mat-label>Date Signed</mat-label>
               <div>
-                <input [matDatepicker]="picker">
-                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
+                <input [matDatepicker]="picker1" placeholder="MM/DD/YYYY">
+                <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
               </div>
             </div>
           </mat-grid-tile>
@@ -106,9 +106,9 @@
             <div>
               <mat-label>Date Signed</mat-label>
               <div>
-                <input [matDatepicker]="picker">
-                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
+                <input [matDatepicker]="picker2" placeholder="MM/DD/YYYY">
+                <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
               </div>
             </div>
           </mat-grid-tile>
