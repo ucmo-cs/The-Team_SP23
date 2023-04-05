@@ -35,6 +35,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ComponentBiggesttakeawayComponent } from './component-biggesttakeaway/component-biggesttakeaway.component';
 import { ComponentBarriersorhurdlesComponent } from './component-barriersorhurdles/component-barriersorhurdles.component';
 import { ComponentImproveyourperformanceComponent } from './component-improveyourperformance/component-improveyourperformance.component';
+import { FeedbackComponent } from './component-thoughts/feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { ComponentImproveyourperformanceComponent } from './component-improveyou
     PEComponent,
     ComponentBiggesttakeawayComponent,
     ComponentBarriersorhurdlesComponent,
-    ComponentImproveyourperformanceComponent
+    ComponentImproveyourperformanceComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,
