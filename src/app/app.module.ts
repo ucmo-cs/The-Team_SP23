@@ -37,6 +37,7 @@ import { ComponentBarriersorhurdlesComponent } from './component-barriersorhurdl
 import { ComponentImproveyourperformanceComponent } from './component-improveyourperformance/component-improveyourperformance.component';
 import { FeedbackComponent } from './component-thoughts/feedback/feedback.component';
 import { ComponentHoldYourselfAccountableComponent } from './component-hold-yourself-accountable/component-hold-yourself-accountable.component';
+import { ComponentDescribeAHardTaskComponent } from './component-describe-a-hard-task/component-describe-a-hard-task.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { ComponentHoldYourselfAccountableComponent } from './component-hold-your
     ComponentBarriersorhurdlesComponent,
     ComponentImproveyourperformanceComponent,
     FeedbackComponent,
-    ComponentHoldYourselfAccountableComponent
+    ComponentHoldYourselfAccountableComponent,
+    ComponentDescribeAHardTaskComponent
   ],
   imports: [
     BrowserModule,
