@@ -15,8 +15,9 @@
 
 @import './material/global.scss';
 
-@include custom-tabs-theme();
+@include page-container();
 @include html-theme();
+@include textboxes();
 
 $The-Team_SP23-primary: mat.define-palette(mat.$amber-palette);
 $The-Team_SP23-accent: mat.define-palette(mat.$gray-palette);

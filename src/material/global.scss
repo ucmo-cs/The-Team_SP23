@@ -1,11 +1,10 @@
 @use "@angular/material" as mat;
 
-@mixin custom-tabs-theme() {
-  .mcd-tab--active {
-    border-width: 9px;
-    border-style: solid;
-    border-color: orange;
-    background-color: black;
+@mixin page-container() {
+  .container {
+    border: grey solid 1px;
+    border-radius: 0px 0px 30px 30px;
+    padding: 0px 10px 5px 10px;
   }
 }
 
@@ -15,9 +14,39 @@
     background-image: linear-gradient(to bottom right, #fbd333, #ef9d33);
     background-repeat: no-repeat;
     background-size: cover;
+    min-width: 100%;
+    min-height: 100%;
   }
 
   body {
     margin: 0px;
+  }
+}
+
+@mixin textboxes() {
+  .textbox {
+    width: 100%;
+    padding: 5px;
+  
+    mat-label{
+        font-size: small;
+        color: grey;
+    }
+  
+    mat-form-field{
+        width: 90%;
+        max-height: 9em;
+        outline: 1px solid black;
+  
+        textarea{
+          display: block;
+            max-height: 99px;
+            min-height: 50px;
+        }
+    }
+
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+      background-color: white;
+    }
   }
 }

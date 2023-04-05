@@ -25,6 +25,7 @@ mat-card {
     display: inline-block;
     font-size: 16px;
     transition-duration: 0.4s;
+    width: 25%;
 }
 
 .active, .tabs:hover {
