@@ -36,6 +36,7 @@ import { ComponentBiggesttakeawayComponent } from './component-biggesttakeaway/c
 import { ComponentBarriersorhurdlesComponent } from './component-barriersorhurdles/component-barriersorhurdles.component';
 import { ComponentImproveyourperformanceComponent } from './component-improveyourperformance/component-improveyourperformance.component';
 import { FeedbackComponent } from './component-thoughts/feedback/feedback.component';
+import { ComponentHoldYourselfAccountableComponent } from './component-hold-yourself-accountable/component-hold-yourself-accountable.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { FeedbackComponent } from './component-thoughts/feedback/feedback.compon
     ComponentBiggesttakeawayComponent,
     ComponentBarriersorhurdlesComponent,
     ComponentImproveyourperformanceComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    ComponentHoldYourselfAccountableComponent
   ],
   imports: [
     BrowserModule,
