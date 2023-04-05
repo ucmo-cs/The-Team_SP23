@@ -1,0 +1,31 @@
+mat-card {
+    margin: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: 'Roboto';
+    height: 100%;
+    width: 50%;
+    border-radius: 30px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2em;
+}
+
+.card {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+form{
+    padding-bottom: 1em;
+    padding-top: 1em;
+    width: 100%;
+    height: 100%;
+
+    mat-form-field{
+        padding-bottom: 20px;
+        width: 100%;
+    }
+}
