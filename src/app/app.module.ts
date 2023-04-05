@@ -38,6 +38,9 @@ import { ComponentImproveyourperformanceComponent } from './component-improveyou
 import { FeedbackComponent } from './component-thoughts/feedback/feedback.component';
 import { ComponentHoldYourselfAccountableComponent } from './component-hold-yourself-accountable/component-hold-yourself-accountable.component';
 import { ComponentDescribeAHardTaskComponent } from './component-describe-a-hard-task/component-describe-a-hard-task.component';
+import { ComponentLeadershipCouldImproveComponent } from './component-leadership-could-improve/component-leadership-could-improve.component';
+import { ComponentMainGoalForThisYearComponent } from './component-main-goal-for-this-year/component-main-goal-for-this-year.component';
+import { ComponentAreasWouldYouLikeComponent } from './component-areas-would-you-like/component-areas-would-you-like.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +61,10 @@ import { ComponentDescribeAHardTaskComponent } from './component-describe-a-hard
     ComponentImproveyourperformanceComponent,
     FeedbackComponent,
     ComponentHoldYourselfAccountableComponent,
-    ComponentDescribeAHardTaskComponent
+    ComponentDescribeAHardTaskComponent,
+    ComponentLeadershipCouldImproveComponent,
+    ComponentMainGoalForThisYearComponent,
+    ComponentAreasWouldYouLikeComponent
   ],
   imports: [
     BrowserModule,
