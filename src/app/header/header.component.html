@@ -15,7 +15,7 @@
             </button>
                 
             <mat-menu #menu="matMenu">
-                <button mat-menu-item>Self Assessment</button>
+                <button mat-menu-item routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Self Assessment</button>
             </mat-menu>
                 
             <button style="background-color:transparent" mat-flat-button [matMenuTriggerFor]="user">
@@ -23,7 +23,7 @@
             </button>
             
             <mat-menu #user="matMenu">
-                <button mat-menu-item>Logout</button>
+                <button mat-menu-item routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">Logout</button>
             </mat-menu>
 
         </mat-grid-tile>
