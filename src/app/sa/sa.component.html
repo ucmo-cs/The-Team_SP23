@@ -1,23 +1,30 @@
 <div class="container">
-  <section>
-    <div style="float:inline-start">
-      <mat-label>Employee Name</mat-label> <br>
-      <mat-form-field class="textinput">
-        <input matInput>
-      </mat-form-field>
-    </div>
+  <h2>Self Assessment</h2>
 
-    <div style="float:inline-start">
-      <mat-label>Date Completed </mat-label>
-      <input [matDatepicker]="picker3" placeholder="MM/DD/YYYY">
-      <mat-datepicker-toggle matIconSuffix [for]="picker3"></mat-datepicker-toggle>
-      <mat-datepicker #picker3></mat-datepicker>
-    </div>
+  <section><!--View year, delete button, add new button-->
+    <app-select></app-select>
   </section>
+  <section> <!--Employee name and date-->
+      <div style="float:inline-start">
+        <mat-label>Employee Name</mat-label>
+        <mat-form-field class="textinput">
+          <input matInput>
+        </mat-form-field>
+      </div>
+      <div style="float:inline-start">
+        <mat-label>Date Completed         </mat-label>
+        <mat-form-field appearance="fill"  style="outline: none">
+          <input matInput [matDatepicker]="completed" placeholder="MM/DD/YYYY">
+          <mat-datepicker-toggle matIconSuffix [for]="completed"></mat-datepicker-toggle>
+          <mat-datepicker #completed></mat-datepicker>
+        </mat-form-field>
+
+      </div>
+    </section>
 
   <div style="clear:both;">&nbsp;</div>
 
-  <div class="textbox" id="accomplishments">
+  <div class="textbox" id="accomplishments" > <!--Accomplishments-->
     <mat-label>List three accomplishments you had for the year.</mat-label>
     <ul>
       <li><mat-form-field [style.width.%]="100" subscriptSizing="dynamic"><textarea matInput></textarea></mat-form-field></li>
@@ -28,5 +35,37 @@
 
   <div style="clear:both;">&nbsp;</div>
 
+<section><!--Biggest takeaway, hard task-->
+
+</section><div style="clear:both;">&nbsp;</div>
+
+<section><!--Improve performance, actions needed-->
+
+</section><div style="clear:both;">&nbsp;</div>
+
+
+<section><!--Barriers, metrics/milestones-->
+
+</section><div style="clear:both;">&nbsp;</div>
+
+<section><!--Held accountable-->
+
+</section><div style="clear:both;">&nbsp;</div>
+
+<section><!--Examples-->
+
+</section><div style="clear:both;">&nbsp;</div>
+
+<section><!--Main goal, hope to learn-->
+
+</section><div style="clear:both;">&nbsp;</div>
+
+<section><!--Leadership team improve, feedback-->
+
+</section><div style="clear:both;">&nbsp;</div>
+
+<section><!--Export and save buttons-->
+
+</section><div style="clear:both;">&nbsp;</div>
 
 </div>

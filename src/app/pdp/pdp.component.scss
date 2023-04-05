@@ -1,3 +1,9 @@
+.box {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 h2 {
     display: flex;
     justify-content: center;
@@ -5,8 +11,31 @@ h2 {
 }
 
 
-mat-grid-tile {
-    /*border: rgb(90, 4, 4) solid 3px;*/
+.textbox {
     width: auto;
-    height: auto;
-}
+    padding: 5px;
+
+
+    mat-label{
+        font-size: small;
+        color: grey;
+    }
+
+    mat-form-field {
+        width: 90%;
+        height: fit-content;
+        max-height: 9em;
+        outline: 1px solid black;
+
+        textarea{
+            max-height: 99px;
+            min-height: 50px;
+        }
+
+
+    }
+
+    }
+
+
+
