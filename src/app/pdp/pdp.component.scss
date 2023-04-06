@@ -1,12 +1,13 @@
 .box {
   display: flex;
-  justify-content: center;
-
-}
-
-.box span{
-  float: left;
-  margin: 0 5px;
+justify-content: center;
+align-items: center;
+  float:left;
+  width: 100%;
+  span{
+    float: left;
+    margin: 0 5px;
+  }
 }
 
 h2 {
@@ -15,32 +16,15 @@ h2 {
     margin-top: 2em;
 }
 
+.sbox {
+    float:left;
+    width: 20%;
+    padding-left: 20px;
+}
 
-.textbox {
-    width: auto;
-    padding: 5px;
-
-
-    mat-label{
-        font-size: small;
-        color: grey;
-    }
-
-    mat-form-field {
-        width: 90%;
-        height: fit-content;
-        max-height: 9em;
-        outline: 1px solid black;
-
-        textarea{
-            max-height: 99px;
-            min-height: 50px;
-        }
-
-
-    }
-
-    }
-
+.signature {
+    justify-content: center;
+    display: flex;
+}
 
 

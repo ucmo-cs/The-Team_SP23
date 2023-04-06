@@ -9,16 +9,16 @@
 </div>
 
       <section> <!--Name, Date Completed, 6-month check in-->
-<div class="box">
+<div class="box" style="justify-content: left;">
   <span>
-    <mat-label>Employee Name</mat-label>
+    <mat-label>Employee Name</mat-label> <br>
     <mat-form-field class="textinput">
       <input matInput>
     </mat-form-field>
   </span>
 
   <span>
-    <mat-label>Date Completed         </mat-label>
+    <mat-label>Date Completed</mat-label><br>
     <mat-form-field appearance="fill"  style="outline: none">
       <input matInput [matDatepicker]="completed" placeholder="MM/DD/YYYY">
       <mat-datepicker-toggle matIconSuffix [for]="completed"></mat-datepicker-toggle>
@@ -27,7 +27,7 @@
   </span>
 
   <span>
-    <mat-label>6-Month Check-In         </mat-label>
+    <mat-label>6-Month Check-In</mat-label><br>
     <mat-form-field appearance="fill" style="outline: none">
       <input matInput [matDatepicker]="checkin" placeholder="MM/DD/YYYY">
       <mat-datepicker-toggle matIconSuffix [for]="checkin"></mat-datepicker-toggle>
@@ -87,16 +87,16 @@
       </section>  <div style="clear:both;">&nbsp;</div>
 
 
-  <section><!--Signatures and dates-->
-    <div class="textbox" style="float:inline-start">
-      <mat-label>Employee Signature</mat-label>
+  <section class="signature"><!--Signatures and dates-->
+    <div class="textbox sbox">
+      <mat-label>Employee Signature</mat-label><br>
       <mat-form-field subscriptSizing="dynamic">
         <input matInput>
       </mat-form-field>
     </div>
 
-    <div class="textbox" style="float:inline-start">
-        <mat-label>Date Signed</mat-label>
+    <div class="textbox sbox">
+        <mat-label>Date Signed</mat-label> <br>
         <mat-form-field appearance="fill"  style="outline: none">
           <input matInput [matDatepicker]="employeeDate" placeholder="MM/DD/YYYY">
           <mat-datepicker-toggle matIconSuffix [for]="employeeDate"></mat-datepicker-toggle>
@@ -104,15 +104,17 @@
         </mat-form-field>
     </div>
 
-    <div class="textbox" style="float:inline-start">
-      <mat-label>Supervisor Signature</mat-label>
-      <mat-form-field subscriptSizing="dynamic">
+    <span style="padding-right:30px"></span>
+
+    <div class="textbox sbox">
+      <mat-label>Supervisor Signature</mat-label><br>
+      <mat-form-field class="signature" subscriptSizing="dynamic">
         <input matInput>
       </mat-form-field>
     </div>
 
-    <div class="textbox" style="float:inline-start">
-      <mat-label>Date Signed</mat-label>
+    <div class="textbox sbox">
+      <mat-label>Date Signed</mat-label><br>
       <mat-form-field appearance="fill" style="outline: none">
         <input matInput [matDatepicker]="supervisorDate" placeholder="MM/DD/YYYY">
         <mat-datepicker-toggle matIconSuffix [for]="supervisorDate"></mat-datepicker-toggle>

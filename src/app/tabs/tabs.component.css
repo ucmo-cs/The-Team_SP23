@@ -25,11 +25,10 @@ mat-card {
     display: inline-block;
     font-size: 16px;
     transition-duration: 0.4s;
-    width: 25%;
+    width: 30.54%;
 }
 
 .active, .tabs:hover {
     background-color: #ef9d33;
     color: white;
 }
-

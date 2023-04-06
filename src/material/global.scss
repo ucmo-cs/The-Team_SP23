@@ -3,8 +3,12 @@
 @mixin page-container() {
   .container {
     border: grey solid 1px;
-    border-radius: 0px 0px 30px 30px;
     padding: 0px 10px 5px 10px;
+    width: 90%;
+  }
+  .ng-star-inserted {
+    justify-content: center;
+    display: flex;
   }
 }
 
@@ -25,28 +29,29 @@
 
 @mixin textboxes() {
   .textbox {
-    width: 100%;
+    width: 99.9%;
     padding: 5px;
   
     mat-label{
-        font-size: small;
+        font-size: medium;
         color: grey;
     }
   
     mat-form-field{
-        width: 90%;
+        width: 100%;
         max-height: 9em;
         outline: 1px solid black;
   
         textarea{
           display: block;
             max-height: 99px;
-            min-height: 50px;
+            min-height: 70px;
         }
     }
 
     .mdc-text-field--filled:not(.mdc-text-field--disabled) {
       background-color: white;
+      width:99.9%
     }
   }
 }
