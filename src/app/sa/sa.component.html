@@ -4,27 +4,30 @@
   <section><!--View year, delete button, add new button-->
     <app-select></app-select>
   </section>
+  
   <section> <!--Employee name and date-->
-      <div style="float:inline-start">
-        <mat-label>Employee Name</mat-label>
-        <mat-form-field class="textinput">
-          <input matInput>
-        </mat-form-field>
-      </div>
-      <div style="float:inline-start">
-        <mat-label>Date Completed         </mat-label>
-        <mat-form-field appearance="fill"  style="outline: none">
-          <input matInput [matDatepicker]="completed" placeholder="MM/DD/YYYY">
-          <mat-datepicker-toggle matIconSuffix [for]="completed"></mat-datepicker-toggle>
-          <mat-datepicker #completed></mat-datepicker>
-        </mat-form-field>
-
+      <div class="box" style="justify-content: left;">
+        <span>
+          <mat-label>Employee Name</mat-label> <br>
+          <mat-form-field class="textinput">
+            <input matInput>
+          </mat-form-field>
+        </span>
+      
+        <span>
+          <mat-label>Date Completed</mat-label><br>
+          <mat-form-field appearance="fill"  style="outline: none">
+            <input matInput [matDatepicker]="completed" placeholder="MM/DD/YYYY">
+            <mat-datepicker-toggle matIconSuffix [for]="completed"></mat-datepicker-toggle>
+            <mat-datepicker #completed></mat-datepicker>
+          </mat-form-field>
+        </span>
       </div>
     </section>
 
   <div style="clear:both;">&nbsp;</div>
 
-  <div class="textbox, box" id="accomplishments" > <!--Accomplishments-->
+  <div class="textbox" id="accomplishments" > <!--Accomplishments-->
     <mat-label>List three accomplishments you had for the year.</mat-label>
     <ul>
       <li><mat-form-field [style.width.%]="100" subscriptSizing="dynamic"><textarea matInput></textarea></mat-form-field></li>
@@ -37,30 +40,140 @@
 
 <section><!--Biggest takeaway, hard task-->
 
+  <div class="box">
+    <span class="textbox">
+      <mat-label>Biggest Takeaway</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </span>
+
+    <span class="textbox">
+      <mat-label>Hardest Task</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </span>
+
+  </div>
+
 </section><div style="clear:both;">&nbsp;</div>
 
 <section><!--Improve performance, actions needed-->
 
+  <div class="box">
+    <span class="textbox">
+      <mat-label>What has been your biggest takeaway from this past year?</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </span>
+
+    <span class="textbox">
+      <mat-label>Describe a hard task/project you overcame. What did you learn from it?</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </span>
+
+  </div>
+
 </section><div style="clear:both;">&nbsp;</div>
 
-
 <section><!--Barriers, metrics/milestones-->
+
+  <div class="box">
+    <span class="textbox">
+      <mat-label>In what ways do you think you can improve your performance?</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </span>
+
+    <span class="textbox">
+      <mat-label>What actions are needed to support the improvement?</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </span>
+
+  </div>
 
 </section><div style="clear:both;">&nbsp;</div>
 
 <section><!--Held accountable-->
 
+  <div class="box">
+    <span class="textbox" style="width: 50%;">
+      <mat-label>How will you hold yourself accountable for achieving goals and results?</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </span>
+  </div>
+
 </section><div style="clear:both;">&nbsp;</div>
 
 <section><!--Examples-->
+
+  <div class="box">
+    <span class="textbox">
+      <mat-label>Please list examples of positive performance from this year.</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </span>
+
+    <span class="textbox">
+      <mat-label>Please list examples where performance could have been improved.</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </span>
+
+  </div>
 
 </section><div style="clear:both;">&nbsp;</div>
 
 <section><!--Main goal, hope to learn-->
 
+  <div class="box">
+    <span class="textbox">
+      <mat-label>Whatis your main goal for this next year?</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </span>
+
+    <span class="textbox">
+      <mat-label>What do you hope to learn, and what areas would you like to strengthen?</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </span>
+
+  </div>
+
 </section><div style="clear:both;">&nbsp;</div>
 
 <section><!--Leadership team improve, feedback-->
+
+  <div class="box">
+    <span class="textbox">
+      <mat-label>Are there any areas where your leadership team can improve?</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </span>
+
+    <span class="textbox">
+      <mat-label>Any thoughts/feedback you would like us to know?</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </span>
+
+  </div>
 
 </section><div style="clear:both;">&nbsp;</div>
 
