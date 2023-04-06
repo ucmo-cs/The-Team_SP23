@@ -6,9 +6,8 @@
 //TODO: Replace the xxxxx in the below url with the url created in API Gateway after deploying the backend via serverless.
 
 export const environment = {
-    state: 'local',
     production: false,
-    apiUrl: 'http://localhost:3000',
+    apiUrl: 'https://j1k4keqbsf.execute-api.us-east-2.amazonaws.com/',
   }
   
   /*
