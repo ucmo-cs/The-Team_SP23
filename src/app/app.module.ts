@@ -19,10 +19,10 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { Header } from './header/header.component';
 import { Login } from './login/login.component';
 import { Tabs } from './tabs/tabs.component';
-import { SaveComponent } from './save/save.component';
-import { ExportComponent } from './export/export.component';
-import { DeleteComponent } from './delete/delete.component';
-import { AddComponent } from './add/add.component';
+import { SaveComponent } from './buttons/save/save.component';
+import { ExportComponent } from './buttons/export/export.component';
+import { DeleteComponent } from './buttons/delete/delete.component';
+import { AddComponent } from './buttons/add/add.component';
 
 import { AppComponent } from './app.component';
 
@@ -32,15 +32,6 @@ import { PDPComponent } from './pdp/pdp.component';
 import { SAComponent } from './sa/sa.component';
 import { PEComponent } from './pe/pe.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ComponentBiggesttakeawayComponent } from './component-biggesttakeaway/component-biggesttakeaway.component';
-import { ComponentBarriersorhurdlesComponent } from './component-barriersorhurdles/component-barriersorhurdles.component';
-import { ComponentImproveyourperformanceComponent } from './component-improveyourperformance/component-improveyourperformance.component';
-import { FeedbackComponent } from './component-thoughts/feedback/feedback.component';
-import { ComponentHoldYourselfAccountableComponent } from './component-hold-yourself-accountable/component-hold-yourself-accountable.component';
-import { ComponentDescribeAHardTaskComponent } from './component-describe-a-hard-task/component-describe-a-hard-task.component';
-import { ComponentLeadershipCouldImproveComponent } from './component-leadership-could-improve/component-leadership-could-improve.component';
-import { ComponentMainGoalForThisYearComponent } from './component-main-goal-for-this-year/component-main-goal-for-this-year.component';
-import { ComponentAreasWouldYouLikeComponent } from './component-areas-would-you-like/component-areas-would-you-like.component';
 
 @NgModule({
   declarations: [
@@ -57,15 +48,6 @@ import { ComponentAreasWouldYouLikeComponent } from './component-areas-would-you
     PDPComponent,
     SAComponent,
     PEComponent,
-    ComponentBiggesttakeawayComponent,
-    ComponentBarriersorhurdlesComponent,
-    ComponentImproveyourperformanceComponent,
-    FeedbackComponent,
-    ComponentHoldYourselfAccountableComponent,
-    ComponentDescribeAHardTaskComponent,
-    ComponentLeadershipCouldImproveComponent,
-    ComponentMainGoalForThisYearComponent,
-    ComponentAreasWouldYouLikeComponent
   ],
   imports: [
     BrowserModule,
