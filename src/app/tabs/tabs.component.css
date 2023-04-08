@@ -11,7 +11,7 @@ mat-card {
     display: flex;
     justify-content: center;
   }
-  
+
   .tabs {
     background-color: white;
     border-top: 1px solid #ef9d33;
@@ -25,6 +25,7 @@ mat-card {
     display: inline-block;
     font-size: 16px;
     transition-duration: 0.4s;
+    width: 30.54%;
 }
 
 .active, .tabs:hover {

@@ -1,139 +1,138 @@
+<!--Date needs to be saved as YYYY-MM-DD-->
 <div class="container">
-  <mat-grid-list cols="2" rowHeight="1.5:0.5">
-
-        <mat-grid-tile-header colspan="2">
             <h2>Personal Development Plan</h2>
-        </mat-grid-tile-header>
+<div style="margin: 20px;">
+    <section> <!--View Year, Delete Button, Add New Button-->
+      <span><app-select></app-select></span>
+    </section>  <div style="clear:both;">&nbsp;</div>
 
-        <mat-grid-tile colspan="1">
-          <mat-label>Employee Name</mat-label>
-          <input matInput #input [(ngModel)]='empName'>
-        </mat-grid-tile>
+</div>
 
-        <mat-grid-tile colspan="1">
-            <span><app-select></app-select></span>
-        </mat-grid-tile>
+      <section> <!--Name, Date Completed, 6-month check in-->
+<div class="box" style="justify-content: left;">
+  <span>
+    <mat-label>Employee Name</mat-label> <br>
+    <mat-form-field class="textinput">
+      <input matInput>
+    </mat-form-field>
+  </span>
 
-    <mat-grid-tile colspan="2">
-      <div style="min-width: 100%;">
+  <span>
+    <mat-label>Date Completed</mat-label><br>
+    <mat-form-field appearance="fill"  style="outline: none">
+      <input matInput [matDatepicker]="completed" placeholder="MM/DD/YYYY">
+      <mat-datepicker-toggle matIconSuffix [for]="completed"></mat-datepicker-toggle>
+      <mat-datepicker #completed></mat-datepicker>
+    </mat-form-field>
+  </span>
 
-        <mat-grid-list cols="3">
-          <mat-grid-tile id="Short Term Goals">
+  <span>
+    <mat-label>6-Month Check-In</mat-label><br>
+    <mat-form-field appearance="fill" style="outline: none">
+      <input matInput [matDatepicker]="checkin" placeholder="MM/DD/YYYY">
+      <mat-datepicker-toggle matIconSuffix [for]="checkin"></mat-datepicker-toggle>
+      <mat-datepicker #checkin></mat-datepicker>
+    </mat-form-field>
+  </span>
+</div>
 
-            <div class="textbox">
-              <mat-label>Short Term Goals</mat-label>
-              <mat-form-field subscriptSizing="dynamic">
-                <textarea matInput #input [(ngModel)]='shortGoals'></textarea>
-              </mat-form-field>
-            </div>
+      </section>  <div style="clear:both;">&nbsp;</div>
 
-          </mat-grid-tile>
 
-          <mat-grid-tile id="Midterm Goals">
+      <section> <!--Goals-->
+        <div class="box">
+          <span class="textbox">
+            <mat-label>Short Term Goals</mat-label>
+            <mat-form-field subscriptSizing="dynamic">
+              <textarea matInput></textarea>
+            </mat-form-field>
+          </span>
 
-            <div class="textbox">
+
+            <span class="textbox">
               <mat-label>Mid-Term Goals (2-3 years)</mat-label>
               <mat-form-field subscriptSizing="dynamic">
-                <textarea matInput #input [(ngModel)]='mediumGoals'></textarea>
+                <textarea matInput></textarea>
               </mat-form-field>
-            </div>
+            </span>
 
-          </mat-grid-tile>
-
-          <mat-grid-tile id="Long Term Goals">
-
-            <div class="textbox">
+            <span class="textbox">
               <mat-label>Long Term Goals (5 years)</mat-label>
               <mat-form-field subscriptSizing="dynamic">
-                <textarea matInput #input [(ngModel)]='longGoals'></textarea>
+                <textarea matInput></textarea>
               </mat-form-field>
-            </div>
+            </span>
+        </div>
 
-          </mat-grid-tile>
-
-        </mat-grid-list>
-      </div>
-    </mat-grid-tile>
+      </section>  <div style="clear:both;">&nbsp;</div>
 
 
-    <mat-grid-tile id="Development Needs">
-      <div class="textbox">
-        <mat-label>Development Needs</mat-label>
-        <mat-form-field subscriptSizing="dynamic">
-          <textarea matInput #input [(ngModel)]='devNeeds'></textarea>
+      <section> <!--Dev Needs, Action Plan-->
+        <div class="box">
+          <span class="textbox">
+            <mat-label>Development Needs</mat-label>
+            <mat-form-field subscriptSizing="dynamic">
+              <textarea matInput></textarea>
+            </mat-form-field>
+          </span>
+
+          <span class="textbox">
+            <mat-label>Action Plan             </mat-label>
+            <mat-form-field subscriptSizing="dynamic">
+              <textarea matInput></textarea>
+            </mat-form-field>
+          </span>
+
+        </div>
+      </section>  <div style="clear:both;">&nbsp;</div>
+
+
+  <section class="signature"><!--Signatures and dates-->
+    <div class="textbox sbox">
+      <mat-label>Employee Signature</mat-label><br>
+      <mat-form-field subscriptSizing="dynamic">
+        <input matInput>
+      </mat-form-field>
+    </div>
+
+    <div class="textbox sbox">
+        <mat-label>Date Signed</mat-label> <br>
+        <mat-form-field appearance="fill"  style="outline: none">
+          <input matInput [matDatepicker]="employeeDate" placeholder="MM/DD/YYYY">
+          <mat-datepicker-toggle matIconSuffix [for]="employeeDate"></mat-datepicker-toggle>
+          <mat-datepicker #employeeDate></mat-datepicker>
         </mat-form-field>
-      </div>
-    </mat-grid-tile>
+    </div>
 
-    <mat-grid-tile id="Action Plan">
-      <div class="textbox">
-        <mat-label>Action Plan</mat-label>
-        <mat-form-field subscriptSizing="dynamic">
-          <textarea matInput #input [(ngModel)]='actionPlan'></textarea>
-        </mat-form-field>
-      </div>
-    </mat-grid-tile>
+    <span style="padding-right:30px"></span>
 
-    <mat-grid-tile colspan="2">
-      <div style="min-width: 100%;">
-        <mat-grid-list cols="4" rowHeight="1:0.5">
+    <div class="textbox sbox">
+      <mat-label>Supervisor Signature</mat-label><br>
+      <mat-form-field class="signature" subscriptSizing="dynamic">
+        <input matInput>
+      </mat-form-field>
+    </div>
 
-          <mat-grid-tile id="Employee Signature">
-            <div class="textbox">
-              <mat-label>Employee Signature</mat-label>
-              <mat-form-field subscriptSizing="dynamic">
-                <input matInput #input [(ngModel)]='empSign'>
-              </mat-form-field>
-            </div>
-          </mat-grid-tile>
-
-          <mat-grid-tile id="Employee Date">
-            <div>
-              <mat-label>Date Signed</mat-label>
-              <div>
-                <input [matDatepicker]="picker1" [(ngModel)] = 'empSignDate'>
-                <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
-                <mat-datepicker #picker1></mat-datepicker>
-              </div>
-            </div>
-          </mat-grid-tile>
-
-          <mat-grid-tile id="Supervisor Signature">
-            <div class="textbox">
-              <mat-label>Supervisor Signature</mat-label>
-              <mat-form-field subscriptSizing="dynamic">
-                <input matInput #input [(ngModel)]='superSign'>
-              </mat-form-field>
-            </div>
-          </mat-grid-tile>
-
-          <mat-grid-tile>
-            <div>
-              <mat-label>Date Signed</mat-label>
-              <div>
-                <input [matDatepicker]="picker2" [(ngModel)] = 'superSignDate'>
-                <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
-                <mat-datepicker #picker2></mat-datepicker>
-              </div>
-            </div>
-          </mat-grid-tile>
-        </mat-grid-list>
-      </div>
-    </mat-grid-tile>
-
-    <mat-grid-tile></mat-grid-tile>
-    <mat-grid-tile style="float: right;">
-      <div style="min-width: 80%;">
-        <mat-grid-list cols="2">
-          <mat-grid-tile></mat-grid-tile>
-          <mat-grid-tile>
-            <button mat-flat-button color="primary">Export</button>
-            <button mat-flat-button (click)="doPostJob()">Save</button>
-          </mat-grid-tile>
-        </mat-grid-list>
-      </div>
-    </mat-grid-tile>
+    <div class="textbox sbox">
+      <mat-label>Date Signed</mat-label><br>
+      <mat-form-field appearance="fill" style="outline: none">
+        <input matInput [matDatepicker]="supervisorDate" placeholder="MM/DD/YYYY">
+        <mat-datepicker-toggle matIconSuffix [for]="supervisorDate"></mat-datepicker-toggle>
+        <mat-datepicker #supervisorDate></mat-datepicker>
+      </mat-form-field>
+    </div>
 
 
-  </mat-grid-list>
+  </section>  <div style="clear:both;">&nbsp;</div>
+
+
+
+  <section> <!--Export and Save buttons-->
+    <div style="float:inline-end">
+      <button mat-flat-button color="primary">Export</button>
+      <button mat-flat-button>Save</button>
+    </div>
+
+  </section>  <div style="clear:both;">&nbsp;</div>
+
 </div>

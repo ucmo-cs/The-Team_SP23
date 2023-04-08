@@ -45,6 +45,7 @@ import { ComponentAreasWouldYouLikeComponent } from './component-areas-would-you
 @NgModule({
   declarations: [
     AppComponent,
+    AddComponent,
     SaveComponent,
     ExportComponent,
     DeleteComponent,
