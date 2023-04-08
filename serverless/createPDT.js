@@ -48,7 +48,9 @@ exports.createPDT = async (event, context, callback) => {
       developmentNeeds: data.developmentNeeds,
       actionPlan: data.actionPlan,
       empSignature: data.empSignature,
-      superSignature: data.superSignature
+      empSignDate: data.empSignDate,
+      superSignature: data.superSignature,
+      superSignDate: data.superSignDate
     }
   }
 

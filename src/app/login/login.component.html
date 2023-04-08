@@ -1,0 +1,43 @@
+<div class="card">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                <h1>
+                    Login to Employee Portal
+                </h1>
+            </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+
+            <form>
+
+                <div>
+                    <mat-label>Email</mat-label>
+                    <mat-form-field subscriptSizing="dynamic">
+                        <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+                        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                            Please enter a valid email address
+                        </mat-error>
+                        <mat-error *ngIf="emailFormControl.hasError('required')">
+                            Email is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div>
+                    <mat-label>Password</mat-label>
+                    <mat-form-field subscriptSizing="dynamic">
+                        <input matInput type="password" [formControl]="passwordFormControl">
+                        <mat-error *ngIf="passwordFormControl.hasError('required')">
+                            Password is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <button mat-flat-button type="submit" color="primary">Login</button>
+            </form>
+
+        </mat-card-content>
+    </mat-card>
+</div>

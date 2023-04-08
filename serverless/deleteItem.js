@@ -13,6 +13,8 @@ if (process.env.IS_OFFLINE) {
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
 
 const pdtTable = process.env.PERSONAL_TABLE; //Grab the table name from env variables defined in serverless.yml
+const selfTable = process.env.SELF_TABLE;
+const preformanceTable = process.env.PREFORMANCE_TABLE;
 
 exports.delItem = async (event, context, callback) => {
     let headers = {
@@ -29,6 +31,12 @@ exports.delItem = async (event, context, callback) => {
     switch (tableName) { //If you have other tables you would add them here as other case statements to reference that table.
         case "PDT":
             table = pdtTable;
+            break;
+        case "SAT":
+            table = selfTable;
+            break;
+        case "PET":
+            table = preformanceTable;
             break;
         default:
             throw new Error(`Unsupported resource: "${modelName}"`);

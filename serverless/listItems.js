@@ -11,7 +11,9 @@ if (process.env.IS_OFFLINE) {
 }
 
 const db = new AWS.DynamoDB.DocumentClient()
-const tablePDV = process.env.PERSONAL_TABLE
+const pdtTable = process.env.PERSONAL_TABLE;
+const selfTable = process.env.SELF_TABLE;
+const preformanceTable = process.env.PREFORMANCE_TABLE;
 
 exports.listItems = async (event, context, callback) => {
     let headers = {
@@ -27,7 +29,13 @@ exports.listItems = async (event, context, callback) => {
     let table;
     switch (tableName) {
         case "PDT":
-            table = "PersonalDevTable";
+            table = pdtTable;
+            break;
+        case "SAT":
+            table = selfTable;
+            break;
+        case "PET":
+            table = preformanceTable;
             break;
         default:
             throw new Error(`Unsupported resource: "${tableName}"`);
