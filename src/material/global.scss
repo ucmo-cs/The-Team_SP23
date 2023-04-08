@@ -1,37 +1,13 @@
 @use "@angular/material" as mat;
 
-@mixin page-container() {
-  .container {
-    border: grey solid 1px;
-    padding: 0px 10px 5px 10px;
-    width: 90%;
-
-  }
-    app-pdp.ng-star-inserted {
-      justify-content: center;
-      display: flex;
-    }
-
-    app-sa.ng-star-inserted {
-      justify-content: center;
-      display: flex;
-    }
-
-    app-pe.ng-star-inserted {
-      justify-content: center;
-      display: flex;
-    }
-
-}
-
 @mixin html-theme() {
   html {
     background-color: orange; /* fallback color */
     background-image: linear-gradient(to bottom right, #fbd333, #ef9d33);
     background-repeat: no-repeat;
     background-size: cover;
-    min-width: 100%;
     min-height: 100%;
+    min-width: 100%;
   }
 
   body {
@@ -39,31 +15,53 @@
   }
 }
 
+@mixin page-container() {
+  .container {
+    border: grey solid 1px;
+    padding: 0px 10px 5px 10px;
+    width: 90%;
+  }
+  app-pdp.ng-star-inserted {
+    display: flex;
+    justify-content: center;
+  }
+
+  app-pe.ng-star-inserted {
+    display: flex;
+    justify-content: center;
+  }
+
+  app-sa.ng-star-inserted {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 @mixin textboxes() {
   .textbox {
-    width: 99.9%;
     padding: 5px;
-  
-    mat-label{
-        font-size: medium;
-        color: grey;
+    width: 99.9%;
+
+    mat-form-field {
+      width: 100%;
+      max-height: 9em;
+      outline: 1px solid black;
+
+      textarea {
+        display: block;
+        max-height: 99px;
+        min-height: 70px;
+      }
     }
-  
-    mat-form-field{
-        width: 100%;
-        max-height: 9em;
-        outline: 1px solid black;
-  
-        textarea{
-          display: block;
-            max-height: 99px;
-            min-height: 70px;
-        }
+
+    mat-label {
+      color: grey;
+      font-size: medium;
     }
 
     .mdc-text-field--filled:not(.mdc-text-field--disabled) {
       background-color: white;
-      width:99.9%
+      width: 99.9%;
     }
   }
 }

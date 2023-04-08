@@ -1,28 +1,28 @@
 mat-card {
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    font-family: 'Roboto';
+    height: 100%;
+    justify-content: center;
     margin: 20px;
     margin-left: 5%;
     margin-right: 5%;
-    font-family: 'Roboto';
-    height: 100%;
-    width: 50%;
-    border-radius: 30px;
-    background-color: white;
-    justify-content: center;
-    align-items: center;
     padding-bottom: 2em;
+    width: 50%;
 }
 
 .card {
-    justify-content: center;
     align-items: center;
     display: flex;
+    justify-content: center;
 }
 
 form{
+    height: 100%;
     padding-bottom: 1em;
     padding-top: 1em;
     width: 100%;
-    height: 100%;
 
     mat-form-field{
         padding-bottom: 20px;

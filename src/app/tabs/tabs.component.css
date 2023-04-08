@@ -1,34 +1,35 @@
 mat-card {
-    margin: 20px;
-    margin-left: 5%;
-    margin-right: 5%;
-    font-family: 'Roboto';
-    height: 100%;
-    border-radius: 30px;
-    background-color: white;
-  }
-  .nav {
-    display: flex;
-    justify-content: center;
-  }
+  background-color: white;
+  border-radius: 30px;
+  font-family: 'Roboto';
+  height: 100%;
+  margin: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
 
-  .tabs {
-    background-color: white;
-    border-top: 1px solid #ef9d33;
-    border-left: 1px solid #ef9d33;
-    border-right: 1px solid #ef9d33;
-    border-bottom: 1px solid gray;
-    color: #ef9d33;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    transition-duration: 0.4s;
-    width: 30.54%;
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.tabs {
+  background-color: white;
+  border-bottom: 1px solid gray;
+  border-left: 1px solid #ef9d33;
+  border-top: 1px solid #ef9d33;
+  border-right: 1px solid #ef9d33;
+  color: #ef9d33;
+  display: inline-block;
+  font-size: 16px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.4s;
+  width: 30.54%;
 }
 
 .active, .tabs:hover {
-    background-color: #ef9d33;
-    color: white;
+  background-color: #ef9d33;
+  color: white;
 }

@@ -1,72 +1,77 @@
 import { NgModule } from '@angular/core';
+
+//Angular components and libraries
+import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { MatGridListModule} from '@angular/material/grid-list';
-import { MatIconModule } from '@angular/material/icon';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatTableModule } from "@angular/material/table";
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
-import { MatSelectModule} from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatGridListModule} from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatSelectModule} from '@angular/material/select';
+import { MatTableModule } from "@angular/material/table";
+import { MatToolbarModule } from '@angular/material/toolbar';
 
+//Pages
+import { PDPComponent } from './pdp/pdp.component';
+import { PdtTestComponent } from './pdp/pdt-test/pdt-test.component';
+import { PEComponent } from './pe/pe.component';
+import { SAComponent } from './sa/sa.component';
+
+//Buttons
+import { AddComponent } from './buttons/add/add.component';
+import { DeleteComponent } from './buttons/delete/delete.component';
+import { ExportComponent } from './buttons/export/export.component';
+import { SaveComponent } from './buttons/save/save.component';
+
+//Other components
 import { Header } from './header/header.component';
 import { Login } from './login/login.component';
+import { SelectComponent } from './select/select.component';
 import { Tabs } from './tabs/tabs.component';
-import { SaveComponent } from './buttons/save/save.component';
-import { ExportComponent } from './buttons/export/export.component';
-import { DeleteComponent } from './buttons/delete/delete.component';
-import { AddComponent } from './buttons/add/add.component';
+
 
 import { AppComponent } from './app.component';
-
-import { PdtTestComponent } from './pdt-test/pdt-test.component';
-import { SelectComponent } from './select/select.component';
-import { PDPComponent } from './pdp/pdp.component';
-import { SAComponent } from './sa/sa.component';
-import { PEComponent } from './pe/pe.component';
-import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddComponent,
-    SaveComponent,
-    ExportComponent,
     DeleteComponent,
+    ExportComponent,
     Header,
     Login,
-    Tabs,
-    PdtTestComponent,
-    SelectComponent,
     PDPComponent,
-    SAComponent,
     PEComponent,
+    PdtTestComponent,
+    SAComponent,
+    SaveComponent,
+    SelectComponent,
+    Tabs
   ],
   imports: [
+    AppRoutingModule,
+    BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
-    MatInputModule,
-    MatTableModule,
-    BrowserAnimationsModule,
-    MatSelectModule,
-    MatInputModule,
+    HttpClientModule,
+    MatButtonModule,
     MatCardModule,
+    MatDatepickerModule,
     MatGridListModule,
     MatIconModule,
+    MatInputModule,
     MatMenuModule,
-    MatToolbarModule,
-    MatButtonModule,
-    HttpClientModule,
-    AppRoutingModule,
-    MatDatepickerModule,
     MatNativeDateModule,
+    MatSelectModule,
+    MatTableModule,
+    MatToolbarModule,
     ReactiveFormsModule
   ],
   providers: [],

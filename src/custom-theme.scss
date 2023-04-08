@@ -15,8 +15,8 @@
 
 @import './material/global.scss';
 
-@include page-container();
 @include html-theme();
+@include page-container();
 @include textboxes();
 
 $The-Team_SP23-primary: mat.define-palette(mat.$amber-palette);

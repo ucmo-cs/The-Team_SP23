@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatTableDataSource } from '@angular/material/table';
-import { ApiService } from '../services/api.service';
+import { ApiService } from '../../services/api.service';
 import { MatInputModule } from '@angular/material/input';
-import { PDT } from "../models/pdt";
+import { PDT } from "../../models/pdt";
 
 @Component({
     selector: 'pdppage-test',

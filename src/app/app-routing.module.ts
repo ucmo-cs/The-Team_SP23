@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 
 import { Routes, RouterModule } from '@angular/router';
 
-import { PDPComponent } from './pdp/pdp.component';
-import { SAComponent } from './sa/sa.component';
-import { PEComponent } from './pe/pe.component';
 import { Login } from './login/login.component';
+import { PDPComponent } from './pdp/pdp.component';
+import { PEComponent } from './pe/pe.component';
+import { SAComponent } from './sa/sa.component';
 import { Tabs } from './tabs/tabs.component';
 
 const routes: Routes = [

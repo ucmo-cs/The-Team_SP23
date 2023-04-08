@@ -1,19 +1,19 @@
 .add {
     background-color: #ef9d33;
     color: white;
+    display: inline-block;
+    border-color: transparent;
+    border-radius: 50px;
+    font-size: small;
+    font-weight: bold;
     padding: 10px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: small;
-    font-weight: bold;
-    border-radius: 50px;
-    border-color: transparent;
     transition-duration: 0.4s;
 }
 
 .add:hover {
     background-color: white;
-    color: #ef9d33;
     border: 2px solid #ef9d33;
+    color: #ef9d33;
 }
