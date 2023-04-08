@@ -128,9 +128,9 @@
 
 
   <section> <!--Export and Save buttons-->
-    <div style="float:inline-end">
-      <button mat-flat-button color="primary">Export</button>
-      <button mat-flat-button (click)="doPostJob()">Save</button>
+    <div style="float:right">
+      <app-export></app-export>
+      <app-add (click)="doPostJob()"></app-add>
     </div>
 
   </section>  <div style="clear:both;">&nbsp;</div>
