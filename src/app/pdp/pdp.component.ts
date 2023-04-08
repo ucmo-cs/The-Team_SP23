@@ -13,6 +13,9 @@ export class PDPComponent {
   private pdtUrl = "https://j1k4keqbsf.execute-api.us-east-2.amazonaws.com/PDT"
 
   empName = ''
+  completeDate = new Date();
+  checkinDate = new Date();
+  futureCheckin = new Date(this.checkinDate.setMonth(this.checkinDate.getMonth()+6))
   shortGoals = ''
   mediumGoals = ''
   longGoals = ''
@@ -35,6 +38,8 @@ export class PDPComponent {
     const httpOptions = {
       params:{
         empName: this.empName,
+        completed: this.completeDate,
+        futureCheckin: this.futureCheckin,
         shortTermGoals: this.shortGoals,
         mediumTermGoals: this.mediumGoals,
         longTermGoals: this.longGoals,
@@ -48,7 +53,8 @@ export class PDPComponent {
     }
     this.http.post<any>(this.pdtUrl, httpOptions).subscribe({
       next: () => {
-        console.log('WORKED')
+        console.log('WORKED');
+        console.log(httpOptions);
       },
       error: (eer) => {
         console.log('ERROR: ' + eer.message);

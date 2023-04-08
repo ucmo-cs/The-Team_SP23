@@ -13,14 +13,14 @@
   <span>
     <mat-label>Employee Name</mat-label> <br>
     <mat-form-field class="textinput">
-      <input matInput>
+      <input matInput [(ngModel)]='empName'>
     </mat-form-field>
   </span>
 
   <span>
     <mat-label>Date Completed</mat-label><br>
     <mat-form-field appearance="fill"  style="outline: none">
-      <input matInput [matDatepicker]="completed" placeholder="MM/DD/YYYY">
+      <input matInput [matDatepicker]="completed" [(ngModel)]='completeDate' placeholder="MM/DD/YYYY">
       <mat-datepicker-toggle matIconSuffix [for]="completed"></mat-datepicker-toggle>
       <mat-datepicker #completed></mat-datepicker>
     </mat-form-field>
@@ -29,7 +29,7 @@
   <span>
     <mat-label>6-Month Check-In</mat-label><br>
     <mat-form-field appearance="fill" style="outline: none">
-      <input matInput [matDatepicker]="checkin" placeholder="MM/DD/YYYY">
+      <input matInput [matDatepicker]="checkin" [(ngModel)]='checkinDate' placeholder="MM/DD/YYYY">
       <mat-datepicker-toggle matIconSuffix [for]="checkin"></mat-datepicker-toggle>
       <mat-datepicker #checkin></mat-datepicker>
     </mat-form-field>
@@ -44,7 +44,7 @@
           <span class="textbox">
             <mat-label>Short Term Goals</mat-label>
             <mat-form-field subscriptSizing="dynamic">
-              <textarea matInput></textarea>
+              <textarea matInput [(ngModel)]='shortGoals'></textarea>
             </mat-form-field>
           </span>
 
@@ -52,14 +52,14 @@
             <span class="textbox">
               <mat-label>Mid-Term Goals (2-3 years)</mat-label>
               <mat-form-field subscriptSizing="dynamic">
-                <textarea matInput></textarea>
+                <textarea matInput [(ngModel)]='mediumGoals'></textarea>
               </mat-form-field>
             </span>
 
             <span class="textbox">
               <mat-label>Long Term Goals (5 years)</mat-label>
               <mat-form-field subscriptSizing="dynamic">
-                <textarea matInput></textarea>
+                <textarea matInput [(ngModel)]='longGoals'></textarea>
               </mat-form-field>
             </span>
         </div>
@@ -70,16 +70,16 @@
       <section> <!--Dev Needs, Action Plan-->
         <div class="box">
           <span class="textbox">
-            <mat-label>Development Needs</mat-label>
+            <mat-label>Development Needs</mat-label><br>
             <mat-form-field subscriptSizing="dynamic">
-              <textarea matInput></textarea>
+              <textarea matInput [(ngModel)]='devNeeds'></textarea>
             </mat-form-field>
           </span>
 
           <span class="textbox">
-            <mat-label>Action Plan             </mat-label>
+            <mat-label>Action Plan</mat-label><br>
             <mat-form-field subscriptSizing="dynamic">
-              <textarea matInput></textarea>
+              <textarea matInput [(ngModel)]='actionPlan'></textarea>
             </mat-form-field>
           </span>
 
@@ -91,14 +91,14 @@
     <div class="textbox sbox">
       <mat-label>Employee Signature</mat-label><br>
       <mat-form-field subscriptSizing="dynamic">
-        <input matInput>
+        <input matInput [(ngModel)]='empSign'>
       </mat-form-field>
     </div>
 
     <div class="textbox sbox">
         <mat-label>Date Signed</mat-label> <br>
         <mat-form-field appearance="fill"  style="outline: none">
-          <input matInput [matDatepicker]="employeeDate" placeholder="MM/DD/YYYY">
+          <input matInput [matDatepicker]="employeeDate" [(ngModel)]='empSignDate' placeholder="MM/DD/YYYY">
           <mat-datepicker-toggle matIconSuffix [for]="employeeDate"></mat-datepicker-toggle>
           <mat-datepicker #employeeDate></mat-datepicker>
         </mat-form-field>
@@ -109,14 +109,14 @@
     <div class="textbox sbox">
       <mat-label>Supervisor Signature</mat-label><br>
       <mat-form-field class="signature" subscriptSizing="dynamic">
-        <input matInput>
+        <input matInput [(ngModel)]='superSign'>
       </mat-form-field>
     </div>
 
     <div class="textbox sbox">
       <mat-label>Date Signed</mat-label><br>
       <mat-form-field appearance="fill" style="outline: none">
-        <input matInput [matDatepicker]="supervisorDate" placeholder="MM/DD/YYYY">
+        <input matInput [matDatepicker]="supervisorDate" [(ngModel)]='superSignDate' placeholder="MM/DD/YYYY">
         <mat-datepicker-toggle matIconSuffix [for]="supervisorDate"></mat-datepicker-toggle>
         <mat-datepicker #supervisorDate></mat-datepicker>
       </mat-form-field>
@@ -130,7 +130,7 @@
   <section> <!--Export and Save buttons-->
     <div style="float:inline-end">
       <button mat-flat-button color="primary">Export</button>
-      <button mat-flat-button>Save</button>
+      <button mat-flat-button (click)="doPostJob()">Save</button>
     </div>
 
   </section>  <div style="clear:both;">&nbsp;</div>
