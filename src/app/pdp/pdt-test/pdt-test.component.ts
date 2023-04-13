@@ -33,14 +33,16 @@ import { PDT } from "../../models/pdt";
 
     doDelPDTById(id: string) {
       this.http.delete<any>(this.delPdtIDUrl + '/' + id).subscribe( 
-      res => {this.dataSource = new MatTableDataSource(res)},
+      res => {this.dataSource = new MatTableDataSource(res);},
       err => {console.log("Error Occured" + err.message);}
       );
+      console.log("TEST")
     }
 
-    doGetPDTById(id: string) {
-      this.http.get<any>(this.getPdtIDUrl + '/' + id).subscribe( 
-      res => {this.dataSource = new MatTableDataSource(res)},
+    doGetPDTById() {
+      
+      this.http.get<any>(this.getPdtIDUrl + this.id).subscribe( 
+      res => {this.dataSource = new MatTableDataSource(res); console.log(res);},
       err => {console.log("Error Occured" + err.message);}
       );
     }

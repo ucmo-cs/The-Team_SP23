@@ -30,13 +30,13 @@ exports.delItem = async (event, context, callback) => {
     let table;
     switch (tableName) { //If you have other tables you would add them here as other case statements to reference that table.
         case "PDT":
-            table = pdtTable;
+            table = "PersonalDevTable";
             break;
         case "SAT":
-            table = selfTable;
+            table = "SelfAssementTable";
             break;
         case "PET":
-            table = preformanceTable;
+            table = "PreformanceEvaluationTable";
             break;
         default:
             throw new Error(`Unsupported resource: "${modelName}"`);
