@@ -2,7 +2,9 @@
   <h2 style="text-align: center;">Self Assessment</h2>
 
   <section><!--View year, delete button, add new button-->
-    <app-select></app-select>
+    <span><app-select></app-select></span>
+    <span><app-delete></app-delete></span>
+    <span><app-add></app-add></span>
   </section>
   
   <section> <!--Employee name and date-->
@@ -177,8 +179,11 @@
 
 </section><div style="clear:both;">&nbsp;</div>
 
-<section><!--Export and save buttons-->
-
-</section><div style="clear:both;">&nbsp;</div>
+<section> <!--Export and Save buttons-->
+  <div style="float:right">
+    <app-export></app-export>
+    <app-save></app-save>
+  </div>
+</section>  <div style="clear:both;">&nbsp;</div>
 
 </div>

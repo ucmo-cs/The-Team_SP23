@@ -4,6 +4,8 @@
 <div style="margin: 20px;">
     <section> <!--View Year, Delete Button, Add New Button-->
       <span><app-select></app-select></span>
+      <span><app-delete></app-delete></span>
+      <span><app-add></app-add></span>
     </section>  <div style="clear:both;">&nbsp;</div>
 
 </div>
@@ -130,9 +132,8 @@
   <section> <!--Export and Save buttons-->
     <div style="float:right">
       <app-export></app-export>
-      <app-add (click)="doPostJob()"></app-add>
+      <app-save (click)="doPostJob()"></app-save>
     </div>
-
   </section>  <div style="clear:both;">&nbsp;</div>
 
 </div>
