@@ -20,8 +20,10 @@
     </div>
     <div style="float:inline-start">
       <mat-label>Date Completed</mat-label><br>
-      <mat-form-field class="textinput">
-        <input matInput>
+      <mat-form-field appearance="fill"  style="outline: none">
+        <input matInput [matDatepicker]="completed" placeholder="MM/DD/YYYY">
+        <mat-datepicker-toggle matIconSuffix [for]="completed"></mat-datepicker-toggle>
+        <mat-datepicker #completed></mat-datepicker>
       </mat-form-field>
     </div>
   </section><div style="clear:both;">&nbsp;</div>
