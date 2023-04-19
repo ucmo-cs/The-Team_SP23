@@ -21,8 +21,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 //Pages
 import { PDPComponent } from './pdp/pdp.component';
 import { PdtTestComponent } from './pdp/pdt-test/pdt-test.component';
+import { PEComponentAdmin } from './pe-admin/pe-admin.component';
 import { PEComponent } from './pe/pe.component';
 import { SAComponent } from './sa/sa.component';
+
 
 //Buttons
 import { AddComponent } from './buttons/add/add.component';
@@ -34,9 +36,8 @@ import { SaveComponent } from './buttons/save/save.component';
 import { Header } from './header/header.component';
 import { Login } from './login/login.component';
 import { SelectComponent } from './select/select.component';
+import { SelectComponentAdmin } from './select-admin/select-admin.component';
 import { Tabs } from './tabs/tabs.component';
-
-
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -48,11 +49,13 @@ import { AppComponent } from './app.component';
     Header,
     Login,
     PDPComponent,
+    PEComponentAdmin,
     PEComponent,
     PdtTestComponent,
     SAComponent,
     SaveComponent,
     SelectComponent,
+    SelectComponentAdmin,
     Tabs
   ],
   imports: [
