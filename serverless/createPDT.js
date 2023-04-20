@@ -20,7 +20,7 @@ exports.createPDT = async (event, context, callback) => {
     'Access-Control-Allow-Credentials': true
   };
   let statusCode = 200;
-  
+
   const data = JSON.parse(event.body);
   console.log("EVENT:::", data);
 

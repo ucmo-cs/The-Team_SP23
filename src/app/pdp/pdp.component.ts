@@ -35,7 +35,7 @@ export class PDPComponent {
   
   
 
-  doPostJob() {
+  doPostPDT() {
     const data = {
       empName: this.empName,
       shortTermGoals: this.shortGoals,

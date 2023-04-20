@@ -53,8 +53,11 @@ exports.createSAT = async (event, context, callback) => {
       barriers: data.barriers,
       milestones: data.milestones,
       accountable: data.accountable,
-      positiveExamples: data.positiveExamples,
-      improvementExamples: data.improvementExamples,
+      neededImprovement: data.positiveExamples,
+      imporvementActions: data.improvementExamples,
+      positivePreformanceExamples: data.positivePreformanceExamples,
+      improvementPreformanceExamples: data.improvementPreformanceExamples,
+      strengthen: data.strengthen,
       oneYearGoal: data.oneYearGoal,
       leadershipImprovement: data.leadershipImprovement,
       feedback: data.feedback

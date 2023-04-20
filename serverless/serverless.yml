@@ -67,6 +67,12 @@ functions:
       - httpApi:
           path: /{model}/id/{id}
           method: DELETE
+  updateTableEntry:
+    handler: updateTable.updateTable
+    events:
+      - httpApi:
+          path: /{model}/update/{id}
+          method: PUT
 
 resources:
   Resources:
