@@ -2,7 +2,9 @@
 
 const AWS = require('aws-sdk')
 
-  exports.updateTable = async (event, context, callback) => {
+const db = new AWS.DynamoDB.DocumentClient()
+
+  exports.updateTable = async (event, item) => {
     let headers = {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Credentials': true
@@ -11,9 +13,6 @@ const AWS = require('aws-sdk')
 
     const tableName = event.pathParameters.model
     const id = event.pathParameters.id;
-
-    const { paramsName } = event.body;
-    const { paramsValue } = event.body;
 
     let table;
     switch (tableName) { //If you have other tables you would add them here as other case statements to reference that table.
@@ -30,43 +29,63 @@ const AWS = require('aws-sdk')
             throw new Error(`Unsupported resource: "${modelName}"`);
     }
 
+    /*
+    const itemKeys = Object.keys(event.body).filter(k => k !== id);
+        const params = {
+            TableName: table,
+            UpdateExpression: `SET ${itemKeys.map((k, index) => `#field${index} = :value${index}`).join(', ')}`,
+            ExpressionAttributeNames: itemKeys.reduce((accumulator, k, index) => ({
+                ...accumulator,
+                [`#field${index}`]: k
+            }), {}),
+            ExpressionAttributeValues: itemKeys.reduce((accumulator, k, index) => ({
+                ...accumulator,
+                [`:value${index}`]: event.body[k]
+            }), {}),
+            Key: {
+                "id": id
+            },
+                ReturnValues: 'ALL_NEW'
+            };
+    */
+
     const params = {
         TableName: table,
         Key: {
-            'id': id,
+            "id": id
         },
-        ConditionExpression: 'attribute_exisits(id)',
-        UpdateExpression: 'set #paramName = :paramsValue',
+        UpdateExpression: "set #MyVariable = :x",
         ExpressionAttributeNames: {
-            '#paramName': paramsName
+            "#MyVariable": "empName"
         },
         ExpressionAttributeValues: {
-            ':paramsValue': paramsValue
-        },
-        ReturnValues: 'ALL_NEW'
-    }
+            ":x": "ddddd",
+        }
+    };
+
+    db.update(params, function(err, data) {
+        if (err) console.log("ERROR: ",err);
+        else console.log("DATA: ", data);
+    });
+    
     /*
-      statusCode,
-                headers,
-                body: JSON.stringify({message: 'Updated Entry Successfully!'})
-            });}).catctry{
-        await db.update(params).promise()
-        .then(res => {
-            callback(null, {
-              h(err => {
-                console.log(err);
-                callback(null, {
-                    statusCode: 500,
-                    headers,
-                    body: JSON.stringify({message: 'Unable to Update Entry'})
-                });
-            });
+    try {
+    await db.update(params).promise().then(res => {
+        callback(null, {
+            statusCode,
+            headers,
+            body: JSON.stringify({message: 'Created Entry Successfully!'})
+        });
+    }).catch(err => {
+        console.log(err);
+        callback(null, {
+            statusCode: 500,
+            headers,
+            body: JSON.stringify({message: 'Unable to Create Entry'})
+        });
+    });
     } catch (err) {
         return { error: err }
     }
     */
-    return db.update(paramse).promise.then(response => {
-        return response.Attributes;
-    })
-
 }
