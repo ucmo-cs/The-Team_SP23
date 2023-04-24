@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'login', component: Login},
   { path: 'home', component: Tabs,
         children: [
-          { path: 'personal-dev', component: PdtTestComponent },
+          { path: 'personal-dev', component: PDPComponent },
           { path: 'self-assess', component: SAComponent },
           { path: 'performance-eval', component: PEComponent},
           { path: 'performance-eval-admin', component: PEComponentAdmin},
