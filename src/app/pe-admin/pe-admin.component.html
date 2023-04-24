@@ -3,54 +3,66 @@
 
   <section><!--View Year and export to pdf-->
     <span><app-select></app-select></span>
-  </section><div style="clear:both;">&nbsp;</div>
+  </section>
+
+  <div style="clear:both;">&nbsp;</div>
 
   <section> <!--Employee name, Supervisor name, date completed-->
-    <div style="float:inline-start">
-      <mat-label>Employee Name</mat-label><br>
-      <mat-form-field class="textinput">
-        <input matInput #input2 [(ngModel)]="empName">
-      </mat-form-field>
-    </div>
-    <div style="float:inline-start">
-      <mat-label>Supervisor Name</mat-label><br>
-      <mat-form-field class="textinput">
-        <input matInput #input2 [(ngModel)]="superName">
-      </mat-form-field>
-    </div>
-    <div style="float:inline-start">
-      <mat-label>Date Completed</mat-label><br>
-      <mat-form-field appearance="fill"  style="outline: none">
-        <input matInput [matDatepicker]="completed" #input2 [(ngModel)]="dateCompleted" placeholder="MM/DD/YYYY">
-        <mat-datepicker-toggle matIconSuffix [for]="completed"></mat-datepicker-toggle>
-        <mat-datepicker #completed></mat-datepicker>
-      </mat-form-field>
-    </div>
-  </section><div style="clear:both;">&nbsp;</div>
+    <div class="box" style="justify-content: left;">
+      <span>
+        <mat-label>Employee Name</mat-label><br>
+        <mat-form-field class="textinput">
+          <input matInput #input2 [(ngModel)]="empName">
+        </mat-form-field>
+      </span>
+
+      <span>
+        <mat-label>Supervisor Name</mat-label><br>
+        <mat-form-field class="textinput">
+          <input matInput #input2 [(ngModel)]="superName">
+        </mat-form-field>
+      </span>
+
+      <span>
+        <mat-label>Date Completed</mat-label><br>
+        <mat-form-field appearance="fill"  style="outline: none">
+          <input matInput [matDatepicker]="completed" #input2 [(ngModel)]="dateCompleted" placeholder="MM/DD/YYYY">
+          <mat-datepicker-toggle matIconSuffix [for]="completed"></mat-datepicker-toggle>
+          <mat-datepicker #completed></mat-datepicker>
+        </mat-form-field>
+      </span>
+
+      </div>
+  </section>
+
+  <div style="clear:both;">&nbsp;</div>
 
   <section> <!--Communication, Collaboration and Teamwork-->
-    <div style="float: inline-start;">
-      <h4>Communication</h4>
-      <div style="float: inline-start;">
-        <mat-label>Rating</mat-label>
-        <span><br><mat-form-field appearance="fill">
-          <mat-select #input2 [(ngModel)]="communicationRating">
-            <mat-option value="Outstanding">Outstanding</mat-option>
-            <mat-option value="Meets Expections">Meets Expectations</mat-option>
-            <mat-option value="Needs Improvement">Needs Improvement</mat-option>
-          </mat-select>
-        </mat-form-field></span>
-      </div>
-      <div style="float: inline-start;">
-        <mat-label>Feedback</mat-label><br>
-        <mat-form-field subscriptSizing="dynamic">
-          <textarea matInput #input2 [(ngModel)]= "communicationFeedack"></textarea>
-        </mat-form-field>
-      </div>
-    </div>
-    <div style="float: inline-start">
+    <div class="box" style="justify-content: left;">
+      <span>
+        <span>
+          <h4>Communication</h4>
+            <span>
+              <mat-label>Rating</mat-label><br>
+              <mat-form-field appearance="fill">
+                <mat-select #input2 [(ngModel)]="communicationRating">
+                <mat-option value="Outstanding">Outstanding</mat-option>
+                <mat-option value="Meets Expections">Meets Expectations</mat-option>
+                <mat-option value="Needs Improvement">Needs Improvement</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </span>
+            <span>
+              <mat-label>Feedback</mat-label><br>
+              <mat-form-field subscriptSizing="dynamic">
+                <textarea matInput #input2 [(ngModel)]= "communicationFeedack"></textarea>
+              </mat-form-field>
+            </span>
+        </span>
+      </span>
+    <span>
       <h4>Collaboration and Teamwork</h4>
-      <div style="float: inline-start;">
+      <span>
         <mat-label>Rating</mat-label>
         <br>
         <mat-form-field appearance="fill">
@@ -60,87 +72,108 @@
             <mat-option value="Needs Improvement">Needs Improvement</mat-option>
           </mat-select>
         </mat-form-field>
-      </div>
-      <div style="float: inline-start;">
+      </span>
+      <span>
         <mat-label>Feedback</mat-label><br>
         <mat-form-field subscriptSizing="dynamic">
           <textarea matInput #input2 [(ngModel)]="teamworkFeedback"></textarea>
         </mat-form-field>
-      </div>
+      </span>
+    </span>
     </div>
-  </section><div style="clear:both;">&nbsp;</div>
+  </section>
+
+  <div style="clear:both;">&nbsp;</div>
 
   <section> <!--Quality and Accuracy of Work & Attendance-->
-    <div style="float: inline-start">
-      <h4>Quality and Accuracy of Work</h4>
-      <div style="float: inline-start;">
-        <mat-label>Rating</mat-label>
-        <br>
-        <mat-form-field appearance="fill">
-          <mat-select #input2 [(ngModel)]="qualityRating">
-            <mat-option value="Outstanding">Outstanding</mat-option>
-            <mat-option value="Meets Expections">Meets Expectations</mat-option>
-            <mat-option value="Needs Improvement">Needs Improvement</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-      <div style="float: inline-start;">
-        <mat-label>Feedback</mat-label><br>
-        <mat-form-field subscriptSizing="dynamic">
-          <textarea matInput #input2 [(ngModel)]="qualityFeedback"></textarea>
-        </mat-form-field>
-      </div>
+    <div class="box" style="justify-content: left;">
+      <span>
+        <span>
+          <h4>Quality and Accuracy of Work</h4>
+          <span>
+            <mat-label>Rating</mat-label><br>
+            <mat-form-field appearance="fill">
+              <mat-select #input2 [(ngModel)]="qualityRating">
+                <mat-option value="Outstanding">Outstanding</mat-option>
+                <mat-option value="Meets Expections">Meets Expectations</mat-option>
+                <mat-option value="Needs Improvement">Needs Improvement</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </span>
+
+          <span>
+            <mat-label>Feedback</mat-label><br>
+            <mat-form-field subscriptSizing="dynamic">
+              <textarea matInput #input2 [(ngModel)]="qualityFeedback"></textarea>
+            </mat-form-field>
+          </span>
+        </span>
+      </span>
+
+    <span>
+      <span>
+        <h4>Attendance, Punctuality, and Reliability</h4>
+        <span>
+          <mat-label>Rating</mat-label><br>
+          <mat-form-field appearance="fill">
+            <mat-select #input2 [(ngModel)]="attendanceRating">
+              <mat-option value="Outstanding">Outstanding</mat-option>
+              <mat-option value="Meets Expections">Meets Expectations</mat-option>
+              <mat-option value="Needs Improvement">Needs Improvement</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </span>
+
+          <span>
+            <mat-label>Feedback</mat-label><br>
+            <mat-form-field subscriptSizing="dynamic">
+              <textarea matInput #input2 [(ngModel)]="attendanceFeedback"></textarea>
+            </mat-form-field>
+          </span>
+        </span>
+      </span>
     </div>
+  </section>
 
+  <div style="clear:both;">&nbsp;</div>
 
-    <div style="float: inline-start">
-      <h4>Attendance, Punctuality, and Reliability</h4>
-      <div style="float: inline-start;">
-        <mat-label>Rating</mat-label>
-        <br>
-        <mat-form-field appearance="fill">
-          <mat-select #input2 [(ngModel)]="attendanceRating">
-            <mat-option value="Outstanding">Outstanding</mat-option>
-            <mat-option value="Meets Expections">Meets Expectations</mat-option>
-            <mat-option value="Needs Improvement">Needs Improvement</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-      <div style="float: inline-start;">                      </div>
-      <div style="float: inline-start;">
-        <mat-label>Feedback</mat-label><br>
-        <mat-form-field subscriptSizing="dynamic">
-          <textarea matInput #input2 [(ngModel)]="attendanceFeedback"></textarea>
-        </mat-form-field>
-      </div>
-    </div>
-
-  </section><div style="clear:both;">&nbsp;</div>
 
   <section><!--Goal Accomplishment and Deadline Timeliness-->
-    <h4>Goal Accomplishment and Deadline Timeliness</h4>
-    <div style="float: inline-start;">
-      <mat-label>Rating</mat-label>
-      <br>
-      <mat-form-field appearance="fill">
-        <mat-select #input2 [(ngModel)]="goalRating">
-          <mat-option value="Outstanding">Outstanding</mat-option>
-          <mat-option value="Meets Expections">Meets Expectations</mat-option>
-          <mat-option value="Needs Improvement">Needs Improvement</mat-option>
-        </mat-select>
-      </mat-form-field>
+    <div class="box" style="justify-content: left;">
+      <span>
+        <h4>Goal Accomplishment and Deadline Timeliness</h4>
+        <span>
+          <mat-label>Rating</mat-label>
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-select #input2 [(ngModel)]="goalRating">
+              <mat-option value="Outstanding">Outstanding</mat-option>
+              <mat-option value="Meets Expections">Meets Expectations</mat-option>
+              <mat-option value="Needs Improvement">Needs Improvement</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </span>
+        <span>
+          <mat-label>Feedback</mat-label><br>
+          <mat-form-field subscriptSizing="dynamic">
+            <textarea matInput #input2 [(ngModel)]="goalFeedback"></textarea>
+          </mat-form-field>
+        </span>
+      </span>
+
     </div>
-    <div style="float: inline-start;">
-      <mat-label>Feedback</mat-label><br>
-      <mat-form-field subscriptSizing="dynamic">
-        <textarea matInput #input2 [(ngModel)]="goalFeedback"></textarea>
-      </mat-form-field>
-    </div>
-  </section><div style="clear:both;">&nbsp;</div>
+  </section>
+
+  <div style="clear:both;">&nbsp;</div>
+
 
   <section>
-    <button mat-flat-button color="primary" (click)="doPostSAT()">Submit</button>
+    <div style="float: right">
+      <button class="export" (click)="doPostSAT()">Submit</button>
+    </div>
   </section>
+
+  <div style="clear:both;">&nbsp;</div>
 
 
 </div>

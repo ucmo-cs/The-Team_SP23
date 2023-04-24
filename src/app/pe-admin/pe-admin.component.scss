@@ -1,0 +1,34 @@
+.box {
+  align-items: center;
+  display: flex;
+  float: left;
+  justify-content: center;
+  width: 100%;
+
+
+  span {
+    float: left;
+    margin: 0 5px;
+  }
+
+}
+
+.export {
+  background-color: white;
+  border: 2px solid #ef9d33;
+  border-radius: 50px;
+  color: #ef9d33;
+  display: inline-block;
+  font-size: small;
+  font-weight: bold;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.4s;
+}
+
+.export:hover {
+  background-color: #ef9d33;
+  border-color: transparent;
+  color: white;
+}
