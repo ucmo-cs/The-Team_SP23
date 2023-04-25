@@ -2,7 +2,18 @@
   <h2 style="text-align: center;">Performance Evaluation</h2>
 
   <section><!--View Year and export to pdf-->
-    <span><app-select></app-select></span>
+    <span><div>
+      <h4 class="header">Select Employee</h4>
+      <mat-form-field appearance="fill">
+        <mat-select>
+          <mat-option value="Nikolos" (onSelectionChange)="doGetPETById('Nikolos')" >Nikolos</mat-option>
+          <mat-option value="Ashlea" (onSelectionChange)="doGetPETById('Ashlea')">Ashlea</mat-option>
+          <mat-option value="Max" (onSelectionChange)="doGetPETById('Max')">Max</mat-option>
+          <mat-option value="Alexis" (onSelectionChange)="doGetPETById('Alexis')">Alexis</mat-option>
+          <mat-option value="Lily" (onSelectionChange)="doGetPETById('Lily')">Lily</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div></span>
   </section>
 
   <div style="clear:both;">&nbsp;</div>
@@ -169,7 +180,13 @@
 
   <section>
     <div style="float: right">
-      <button class="export" (click)="doPostSAT()">Submit</button>
+      <button class="export" (click)="doPostPet()">Submit</button>
+    </div>
+  </section>
+
+  <section>
+    <div style="float: right">
+      <button class="export" (click)="doUpdatePet()">Update</button>
     </div>
   </section>
 

@@ -2,7 +2,18 @@
   <h2 style="text-align: center;">Performance Evaluation</h2>
 
   <section><!--View Year and export to pdf-->
-    <span><app-select></app-select></span>
+    <span><div>
+      <h4 class="header">Select Employee</h4>
+      <mat-form-field appearance="fill">
+        <mat-select>
+          <mat-option value="Nikolos" (onSelectionChange)="doGetPETById('Nikolos')" >Nikolos</mat-option>
+          <mat-option value="Ashlea" (onSelectionChange)="doGetPETById('Ashlea')">Ashlea</mat-option>
+          <mat-option value="Max" (onSelectionChange)="doGetPETById('Max')">Max</mat-option>
+          <mat-option value="Alexis" (onSelectionChange)="doGetPETById('Alexis')">Alexis</mat-option>
+          <mat-option value="Lily" (onSelectionChange)="doGetPETById('Lily')">Lily</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div></span>
     <span><app-export></app-export></span>
   </section>
 
@@ -13,19 +24,21 @@
       <span>
         <mat-label>Employee Name</mat-label><br>
         <mat-form-field class="textinput">
-          <input matInput>
+          <input matInput #input2 [(ngModel)]="empName">
         </mat-form-field>
       </span>
       <span>
         <mat-label>Supervisor Name</mat-label><br>
         <mat-form-field class="textinput">
-          <input matInput>
+          <input matInput #input2 [(ngModel)]="superName">
         </mat-form-field>
       </span>
       <span>
         <mat-label>Date Completed</mat-label><br>
-        <mat-form-field class="textinput">
-          <input matInput disabled>
+        <mat-form-field class="textinput" appearance="fill"  style="outline: none">
+          <input matInput [matDatepicker]="completed" #input2 [(ngModel)]="dateCompleted" placeholder="MM/DD/YYYY" disabled >
+          <mat-datepicker-toggle matIconSuffix [for]="completed"></mat-datepicker-toggle>
+          <mat-datepicker #completed></mat-datepicker>
         </mat-form-field>
       </span>
     </div>
@@ -40,11 +53,11 @@
         <h4>Communication</h4>
         <span>
           <mat-label>Rating</mat-label><br>
-          <input matInput placeholder="Rating needed" disabled>
+          <input matInput placeholder="Rating needed" #input2 [(ngModel)]="communicationRating" disabled>
         </span>
         <span>
           <mat-label>Feedback</mat-label><br>
-          <input matInput placeholder="Feedback goes here" disabled>
+          <input matInput placeholder="Feedback goes here" #input2 [(ngModel)]="communicationFeedack" disabled>
         </span>
       </span>
     </span>
@@ -53,11 +66,11 @@
       <h4>Collaboration and Teamwork</h4>
       <span>
         <mat-label>Rating</mat-label><br>
-        <input matInput placeholder="Rating needed" disabled>
+        <input matInput placeholder="Rating needed" #input2 [(ngModel)]="teamworkRating" disabled>
       </span>
       <span>
         <mat-label>Feedback</mat-label><br>
-        <input matInput placeholder="Feedback goes here" disabled>
+        <input matInput placeholder="Feedback goes here" #input2 [(ngModel)]="teamworkFeedback" disabled>
       </span>
     </span>
     </div>
@@ -72,11 +85,11 @@
           <h4>Quality and Accuracy of Work</h4>
           <span>
             <mat-label>Rating</mat-label><br>
-            <input matInput placeholder="Rating needed" disabled>
+            <input matInput placeholder="Rating needed" #input2 [(ngModel)]="qualityRating" disabled>
           </span>
           <span>
             <mat-label>Feedback</mat-label><br>
-            <input matInput placeholder="Feedback goes here" disabled>
+            <input matInput placeholder="Feedback goes here" #input2 [(ngModel)]="qualityFeedback" disabled>
           </span>
         </span>
       </span>
@@ -86,11 +99,11 @@
           <h4>Attendance, Punctuality, Reliability</h4>
           <span>
             <mat-label>Rating</mat-label><br>
-            <input matInput placeholder="Rating needed" disabled>
+            <input matInput placeholder="Rating needed" #input2 [(ngModel)]="attendanceRating" disabled>
           </span>
           <span>
             <mat-label>Feedback</mat-label><br>
-            <input matInput placeholder="Feedback goes here" disabled>
+            <input matInput placeholder="Feedback goes here" #input2 [(ngModel)]="attendanceFeedback" disabled>
           </span>
         </span>
       </span>
@@ -106,11 +119,11 @@
           <h4>Goal Acccomplishment and Deadline Timeliness</h4>
           <span>
             <mat-label>Rating</mat-label><br>
-            <input matInput placeholder="Rating needed" disabled>
+            <input matInput placeholder="Rating needed" #input2 [(ngModel)]="goalRating" disabled>
           </span>
           <span>
             <mat-label>Feedback</mat-label><br>
-            <input matInput placeholder="Feedback goes here" disabled>
+            <input matInput placeholder="Feedback goes here" #input2 [(ngModel)]="goalFeedback" disabled>
           </span>
         </span>
       </span>

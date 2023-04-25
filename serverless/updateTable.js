@@ -4,7 +4,23 @@ const AWS = require('aws-sdk')
 
 const db = new AWS.DynamoDB.DocumentClient()
 
-  exports.updateTable = async (event, item) => {
+const generateUpdateQuery = (fields) => {
+    let exp = {
+        UpdateExpression: 'set',
+        ExpressionAttributeNames: {},
+        ExpressionAttributeValues: {}
+    }
+    Object.entries(fields).forEach(([key, item]) => {
+        exp.UpdateExpression += ` #${key} = :${key},`;
+        exp.ExpressionAttributeNames[`#${key}`] = key;
+        exp.ExpressionAttributeValues[`:${key}`] = item
+    })
+    exp.UpdateExpression = exp.UpdateExpression.slice(0, -1);
+    return exp
+}
+
+
+  exports.updateTable = async (event, context, callback) => {
     let headers = {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Credentials': true
@@ -13,6 +29,7 @@ const db = new AWS.DynamoDB.DocumentClient()
 
     const tableName = event.pathParameters.model
     const id = event.pathParameters.id;
+    const data = JSON.parse(event.body);
 
     let table;
     switch (tableName) { //If you have other tables you would add them here as other case statements to reference that table.
@@ -30,7 +47,7 @@ const db = new AWS.DynamoDB.DocumentClient()
     }
 
     /*
-    const itemKeys = Object.keys(event.body).filter(k => k !== id);
+    const itemKeys = Object.keys(item).filter(k => k !== id);
         const params = {
             TableName: table,
             UpdateExpression: `SET ${itemKeys.map((k, index) => `#field${index} = :value${index}`).join(', ')}`,
@@ -40,7 +57,7 @@ const db = new AWS.DynamoDB.DocumentClient()
             }), {}),
             ExpressionAttributeValues: itemKeys.reduce((accumulator, k, index) => ({
                 ...accumulator,
-                [`:value${index}`]: event.body[k]
+                [`:value${index}`]: item[k]
             }), {}),
             Key: {
                 "id": id
@@ -49,43 +66,33 @@ const db = new AWS.DynamoDB.DocumentClient()
             };
     */
 
+    let expression = generateUpdateQuery(data)
     const params = {
         TableName: table,
         Key: {
             "id": id
         },
-        UpdateExpression: "set #MyVariable = :x",
-        ExpressionAttributeNames: {
-            "#MyVariable": "empName"
-        },
-        ExpressionAttributeValues: {
-            ":x": "ddddd",
-        }
+        ...expression,
+        ReturnValues: 'ALL_NEW'
     };
-
-    db.update(params, function(err, data) {
-        if (err) console.log("ERROR: ",err);
-        else console.log("DATA: ", data);
-    });
+    console.log(params)
     
-    /*
-    try {
-    await db.update(params).promise().then(res => {
-        callback(null, {
-            statusCode,
-            headers,
-            body: JSON.stringify({message: 'Created Entry Successfully!'})
-        });
-    }).catch(err => {
-        console.log(err);
-        callback(null, {
-            statusCode: 500,
-            headers,
-            body: JSON.stringify({message: 'Unable to Create Entry'})
-        });
-    });
-    } catch (err) {
-        return { error: err }
-    }
-    */
+    
+    await db.update(params, (error, result) => {
+        if (error) {
+            console.error(error);
+            callback(null, {
+              statusCode: error.statusCode || 501,
+              headers: { 'Content-Type': 'text/plain' },
+              body: 'Couldn\'t update the card',
+            });
+            return;
+          }
+
+          callback(null, {
+            statusCode: 200,
+            body: JSON.stringify(result.Attributes),
+          });
+    }).promise();
+    
 }
