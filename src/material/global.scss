@@ -35,6 +35,11 @@
     display: flex;
     justify-content: center;
   }
+
+  app-pe-admin.ng-star-inserted {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 @mixin textboxes() {
