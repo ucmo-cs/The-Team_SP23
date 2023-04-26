@@ -46,26 +46,6 @@ const generateUpdateQuery = (fields) => {
             throw new Error(`Unsupported resource: "${modelName}"`);
     }
 
-    /*
-    const itemKeys = Object.keys(item).filter(k => k !== id);
-        const params = {
-            TableName: table,
-            UpdateExpression: `SET ${itemKeys.map((k, index) => `#field${index} = :value${index}`).join(', ')}`,
-            ExpressionAttributeNames: itemKeys.reduce((accumulator, k, index) => ({
-                ...accumulator,
-                [`#field${index}`]: k
-            }), {}),
-            ExpressionAttributeValues: itemKeys.reduce((accumulator, k, index) => ({
-                ...accumulator,
-                [`:value${index}`]: item[k]
-            }), {}),
-            Key: {
-                "id": id
-            },
-                ReturnValues: 'ALL_NEW'
-            };
-    */
-
     let expression = generateUpdateQuery(data)
     const params = {
         TableName: table,
