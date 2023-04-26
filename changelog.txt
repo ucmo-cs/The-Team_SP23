@@ -1,11 +1,17 @@
-2/17/2023
+Sprint 2 : February 18th - March 13th
 - Upload a basic Angular project to github for base files
-
-2/21/2023
 - Edit stylesheet for background gradient
-
-2/23/2023
 - Submit beginning code
-
-3/3/2023
 - Add severless files
+
+Sprint 3 : March 13th - March 27th
+- Create and add the Personal Development Page
+
+Sprint 4 : March 27th - April 10th
+- Finish implementing Personal Development Page
+- Create and add the Self Assessment Page
+- Create Frontend Login Page
+
+Sprint 5 : April 10th - April 21st
+- Finish Self Assessment Page
+- Create and add employee side and admin side Performance Evaluation Page
