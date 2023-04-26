@@ -39,10 +39,6 @@ import { SelectComponent } from './select/select.component';
 import { SelectComponentAdmin } from './select-admin/select-admin.component';
 import { Tabs } from './tabs/tabs.component';
 import { AppComponent } from './app.component';
-import { ComponentViewYearComponent } from './component-view-year/component-view-year.component';
-import { ComponentSupporttheimprovementComponent } from './component-supporttheimprovement/component-supporttheimprovement.component';
-import { ComponentSupportTheImprovementComponent } from './component-support-the-improvement/component-support-the-improvement.component';
-import { ComponentMetricsmilestonesComponent } from './component-metricsmilestones/component-metricsmilestones.component';
 
 
 @NgModule({
@@ -81,10 +77,6 @@ import { ComponentMetricsmilestonesComponent } from './component-metricsmileston
     MatTableModule,
     MatToolbarModule,
     ReactiveFormsModule
-    ComponentViewYearComponent,
-    ComponentSupporttheimprovementComponent,
-    ComponentSupportTheImprovementComponent,
-    ComponentMetricsmilestonesComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
