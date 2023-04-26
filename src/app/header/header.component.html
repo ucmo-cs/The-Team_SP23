@@ -1,0 +1,32 @@
+<div>
+   <mat-grid-list cols="4" rowHeight="3em">
+        <mat-grid-tile>
+            <img width="140" alt="ROC" src="../assets/logo.webp" />
+        </mat-grid-tile>
+
+        <mat-grid-tile colspan="2">
+            <span class="title">Risen One Employee Portal</span>
+        </mat-grid-tile>
+
+        <mat-grid-tile >
+            <div class="spacer"></div>
+            <button class="hamburger " mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon>menu</mat-icon>
+            </button>
+
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Self Assessment</button>
+            </mat-menu>
+
+            <button style="background-color:transparent" mat-flat-button [matMenuTriggerFor]="user">
+                <mat-icon class="user">person_outline</mat-icon>
+            </button>
+
+            <mat-menu #user="matMenu">
+                <button mat-menu-item routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">Logout</button>
+            </mat-menu>
+
+        </mat-grid-tile>
+
+    </mat-grid-list>
+</div>

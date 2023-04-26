@@ -1,0 +1,189 @@
+<div class="container">
+  <h2 style="text-align: center;">Self Assessment</h2>
+
+  <section><!--View year, delete button, add new button-->
+    <span><app-select></app-select></span>
+    <span><app-delete></app-delete></span>
+    <span><app-add></app-add></span>
+  </section>
+
+  <section> <!--Employee name and date-->
+      <div class="box" style="justify-content: left;">
+        <span>
+          <mat-label>Employee Name</mat-label> <br>
+          <mat-form-field class="textinput">
+            <input matInput #input2 [(ngModel)]="empName">
+          </mat-form-field>
+        </span>
+
+        <span>
+          <mat-label>Date Completed</mat-label><br>
+          <mat-form-field appearance="fill"  style="outline: none">
+            <input matInput [matDatepicker]="completed" #input2 [(ngModel)]="dateCompleted" placeholder="MM/DD/YYYY">
+            <mat-datepicker-toggle matIconSuffix [for]="completed"></mat-datepicker-toggle>
+            <mat-datepicker #completed></mat-datepicker>
+          </mat-form-field>
+        </span>
+      </div>
+    </section>
+
+  <div style="clear:both;">&nbsp;</div>
+
+  <div class="textbox" id="accomplishments" > <!--Accomplishments-->
+    <mat-label>List three accomplishments you had for the year.</mat-label>
+    <ul>
+      <li><mat-form-field [style.width.%]="100" subscriptSizing="dynamic"><textarea matInput #input2 [(ngModel)]="accomplishmentOne"></textarea></mat-form-field></li>
+      <li><mat-form-field [style.width.%]="100" subscriptSizing="dynamic"><textarea matInput #input2 [(ngModel)]="accomplishmentTwo"></textarea></mat-form-field></li>
+      <li><mat-form-field [style.width.%]="100" subscriptSizing="dynamic"><textarea matInput #input2 [(ngModel)]="accomplishmentThree"></textarea></mat-form-field></li>
+    </ul>
+  </div>
+
+  <div style="clear:both;">&nbsp;</div>
+
+<section><!--Biggest takeaway, hard task-->
+
+  <div class="box">
+    <span class="textbox">
+      <mat-label>What has been your biggest takeaway from this past year?</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput #input2 [(ngModel)]="biggestTakeAway"></textarea>
+      </mat-form-field>
+    </span>
+
+    <span class="textbox">
+      <mat-label>Describe a hard task/project you overcame. What did you learn from it?</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput [(ngModel)]="hardTask"></textarea>
+      </mat-form-field>
+    </span>
+
+  </div>
+
+</section><div style="clear:both;">&nbsp;</div>
+
+<section><!--Improve performance, actions needed-->
+
+  <div class="box">
+    <span class="textbox">
+      <mat-label>In what ways do you think you can improve your performance?</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput [(ngModel)]="neededImprovement"></textarea>
+      </mat-form-field>
+    </span>
+
+    <span class="textbox">
+      <mat-label>What actions are needed to support the improvement?</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput [(ngModel)]="imporvementActions"></textarea>
+      </mat-form-field>
+    </span>
+
+  </div>
+
+</section><div style="clear:both;">&nbsp;</div>
+
+<section> <!--Barriers, metrics/milestones-->
+
+  <div class="box">
+    <span class="textbox">
+      <mat-label>What barriers or hurdles exist to improving your preformance?</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput #input2 [(ngModel)]="barriers"></textarea>
+      </mat-form-field>
+    </span>
+
+    <span class="textbox">
+      <mat-label>What metrics/milestones can we use to make sure you're on task?</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput #input2 [(ngModel)]="milestones"></textarea>
+      </mat-form-field>
+    </span>
+
+  </div>
+
+</section><div style="clear:both;">&nbsp;</div>
+
+<section><!--Held accountable-->
+
+  <div class="box">
+    <span class="textbox" style="width: 50%;">
+      <mat-label>How will you hold yourself accountable for achieving goals and results?</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput #input2 [(ngModel)]="accountable"></textarea>
+      </mat-form-field>
+    </span>
+  </div>
+
+</section><div style="clear:both;">&nbsp;</div>
+
+<section><!--Examples-->
+
+  <div class="box">
+    <span class="textbox">
+      <mat-label>Please list examples of positive performance from this year.</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput #input2 [(ngModel)]="positivePreformanceExamples"></textarea>
+      </mat-form-field>
+    </span>
+
+    <span class="textbox">
+      <mat-label>Please list examples where performance could have been improved.</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput #input2 [(ngModel)]="improvementPreformanceExamples"></textarea>
+      </mat-form-field>
+    </span>
+
+  </div>
+
+</section><div style="clear:both;">&nbsp;</div>
+
+<section><!--Main goal, hope to learn-->
+
+  <div class="box">
+    <span class="textbox">
+      <mat-label>What is your main goal for this next year?</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput #input2 [(ngModel)]="oneYearGoal"></textarea>
+      </mat-form-field>
+    </span>
+
+    <span class="textbox">
+      <mat-label>What do you hope to learn, and what areas would you like to strengthen?</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput #input2 [(ngModel)]="strengthen"></textarea>
+      </mat-form-field>
+    </span>
+
+  </div>
+
+</section><div style="clear:both;">&nbsp;</div>
+
+<section><!--Leadership team improve, feedback-->
+
+  <div class="box">
+    <span class="textbox">
+      <mat-label>Are there any areas where your leadership team can improve?</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput #input2 [(ngModel)]="leadershipImprovement"></textarea>
+      </mat-form-field>
+    </span>
+
+    <span class="textbox">
+      <mat-label>Any thoughts/feedback you would like us to know?</mat-label>
+      <mat-form-field subscriptSizing="dynamic">
+        <textarea matInput #input2 [(ngModel)]="feedback"></textarea>
+      </mat-form-field>
+    </span>
+
+  </div>
+
+</section><div style="clear:both;">&nbsp;</div>
+
+<section> <!--Export and Save buttons-->
+  <div style="float:right">
+    <app-export></app-export>
+    <app-save (click)="doPostSAT()"></app-save>
+  </div>
+</section>  <div style="clear:both;">&nbsp;</div>
+
+</div>

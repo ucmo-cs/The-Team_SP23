@@ -1,0 +1,8 @@
+.header {
+    color: gray;
+    margin-bottom: 0;
+}
+
+mat-select {
+  height: auto;
+}

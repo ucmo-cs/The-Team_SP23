@@ -1,0 +1,139 @@
+<!--Date needs to be saved as YYYY-MM-DD-->
+<div class="container">
+            <h2>Personal Development Plan</h2>
+<div style="margin: 20px;">
+    <section> <!--View Year, Delete Button, Add New Button-->
+      <span><app-select></app-select></span>
+      <span><app-delete></app-delete></span>
+      <span><app-add></app-add></span>
+    </section>  <div style="clear:both;">&nbsp;</div>
+
+</div>
+
+      <section> <!--Name, Date Completed, 6-month check in-->
+<div class="box" style="justify-content: left;">
+  <span>
+    <mat-label>Employee Name</mat-label> <br>
+    <mat-form-field class="textinput">
+      <input matInput [(ngModel)]='empName'>
+    </mat-form-field>
+  </span>
+
+  <span>
+    <mat-label>Date Completed</mat-label><br>
+    <mat-form-field appearance="fill"  style="outline: none">
+      <input matInput [matDatepicker]="completed" [(ngModel)]='completeDate' placeholder="MM/DD/YYYY">
+      <mat-datepicker-toggle matIconSuffix [for]="completed"></mat-datepicker-toggle>
+      <mat-datepicker #completed></mat-datepicker>
+    </mat-form-field>
+  </span>
+
+  <span>
+    <mat-label>6-Month Check-In</mat-label><br>
+    <mat-form-field appearance="fill" style="outline: none">
+      <input matInput [matDatepicker]="checkin" [(ngModel)]='checkinDate' placeholder="MM/DD/YYYY">
+      <mat-datepicker-toggle matIconSuffix [for]="checkin"></mat-datepicker-toggle>
+      <mat-datepicker #checkin></mat-datepicker>
+    </mat-form-field>
+  </span>
+</div>
+
+      </section>  <div style="clear:both;">&nbsp;</div>
+
+
+      <section> <!--Goals-->
+        <div class="box">
+          <span class="textbox">
+            <mat-label>Short Term Goals</mat-label>
+            <mat-form-field subscriptSizing="dynamic">
+              <textarea matInput [(ngModel)]='shortGoals'></textarea>
+            </mat-form-field>
+          </span>
+
+
+            <span class="textbox">
+              <mat-label>Mid-Term Goals (2-3 years)</mat-label>
+              <mat-form-field subscriptSizing="dynamic">
+                <textarea matInput [(ngModel)]='mediumGoals'></textarea>
+              </mat-form-field>
+            </span>
+
+            <span class="textbox">
+              <mat-label>Long Term Goals (5 years)</mat-label>
+              <mat-form-field subscriptSizing="dynamic">
+                <textarea matInput [(ngModel)]='longGoals'></textarea>
+              </mat-form-field>
+            </span>
+        </div>
+
+      </section>  <div style="clear:both;">&nbsp;</div>
+
+
+      <section> <!--Dev Needs, Action Plan-->
+        <div class="box">
+          <span class="textbox">
+            <mat-label>Development Needs</mat-label><br>
+            <mat-form-field subscriptSizing="dynamic">
+              <textarea matInput [(ngModel)]='devNeeds'></textarea>
+            </mat-form-field>
+          </span>
+
+          <span class="textbox">
+            <mat-label>Action Plan</mat-label><br>
+            <mat-form-field subscriptSizing="dynamic">
+              <textarea matInput [(ngModel)]='actionPlan'></textarea>
+            </mat-form-field>
+          </span>
+
+        </div>
+      </section>  <div style="clear:both;">&nbsp;</div>
+
+
+  <section class="signature"><!--Signatures and dates-->
+    <div class="textbox sbox">
+      <mat-label>Employee Signature</mat-label><br>
+      <mat-form-field subscriptSizing="dynamic">
+        <input matInput [(ngModel)]='empSign'>
+      </mat-form-field>
+    </div>
+
+    <div class="textbox sbox">
+        <mat-label>Date Signed</mat-label> <br>
+        <mat-form-field appearance="fill"  style="outline: none">
+          <input matInput [matDatepicker]="employeeDate" [(ngModel)]='empSignDate' placeholder="MM/DD/YYYY">
+          <mat-datepicker-toggle matIconSuffix [for]="employeeDate"></mat-datepicker-toggle>
+          <mat-datepicker #employeeDate></mat-datepicker>
+        </mat-form-field>
+    </div>
+
+    <span style="padding-right:30px"></span>
+
+    <div class="textbox sbox">
+      <mat-label>Supervisor Signature</mat-label><br>
+      <mat-form-field class="signature" subscriptSizing="dynamic">
+        <input matInput [(ngModel)]='superSign'>
+      </mat-form-field>
+    </div>
+
+    <div class="textbox sbox">
+      <mat-label>Date Signed</mat-label><br>
+      <mat-form-field appearance="fill" style="outline: none">
+        <input matInput [matDatepicker]="supervisorDate" [(ngModel)]='superSignDate' placeholder="MM/DD/YYYY">
+        <mat-datepicker-toggle matIconSuffix [for]="supervisorDate"></mat-datepicker-toggle>
+        <mat-datepicker #supervisorDate></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+
+  </section>  <div style="clear:both;">&nbsp;</div>
+
+
+
+  <section> <!--Export and Save buttons-->
+    <div style="float:right">
+      <app-export></app-export>
+      <app-save (click)="doPostPDT()"></app-save>
+    </div>
+  </section>  <div style="clear:both;">&nbsp;</div>
+
+</div>

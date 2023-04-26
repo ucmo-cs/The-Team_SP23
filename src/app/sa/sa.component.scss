@@ -1,0 +1,18 @@
+#accomplishments ul li {
+  list-style: none;
+  padding-bottom: 10px;
+  width: 95.9%;
+}
+
+.box {
+  align-items: center;
+  display: flex;
+  float: left;
+  justify-content: center;
+  width: 100%;
+  
+  span {
+    float: left;
+    margin: 0 5px;
+  }
+}

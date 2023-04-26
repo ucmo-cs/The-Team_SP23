@@ -1,0 +1,29 @@
+.box {
+  align-items: center;
+  display: flex;
+  float: left;
+  justify-content: center;
+  width: 100%;
+  
+  span {
+    float: left;
+    margin: 0 5px;
+  }
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.sbox {
+  float: left;
+  padding-left: 20px;
+  width: 20%;
+}
+
+.signature {
+  display: flex;
+  justify-content: center;
+}

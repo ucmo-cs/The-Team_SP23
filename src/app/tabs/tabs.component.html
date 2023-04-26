@@ -1,0 +1,17 @@
+<div style="padding-bottom: 1em;">
+  <mat-card>
+    <mat-card-header style="justify-content: center;">
+      <mat-card-title>
+        <h1>Employee Development</h1>
+      </mat-card-title>
+    </mat-card-header>
+    <nav class="nav">
+      <button class="tabs" type="button" routerLink="/home/personal-dev" routerLinkActive="active" ariaCurrentWhenActive="page">Personal Development Plan</button>
+      <button class="tabs" type="button" routerLink="/home/self-assess" routerLinkActive="active" ariaCurrentWhenActive="page">Self Assessment</button>
+      <button class="tabs" type="button" routerLink="/home/performance-eval" routerLinkActive="active" ariaCurrentWhenActive="page">Performance Evaluation</button>
+    </nav>
+    <router-outlet></router-outlet>
+
+  </mat-card>
+</div>
+

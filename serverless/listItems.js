@@ -2,8 +2,18 @@
 
 const AWS = require("aws-sdk")
 
+let options = {}
+if (process.env.IS_OFFLINE) {
+    options = {
+      region: 'localhost',
+      endpoint: 'http://localhost:8000'
+    }
+}
+
 const db = new AWS.DynamoDB.DocumentClient()
-const tablePDV = process.env.PERSONAL_TABLE
+const pdtTable = process.env.PERSONAL_TABLE;
+const selfTable = process.env.SELF_TABLE;
+const preformanceTable = process.env.PREFORMANCE_TABLE;
 
 exports.listItems = async (event, context, callback) => {
     let headers = {
@@ -15,10 +25,17 @@ exports.listItems = async (event, context, callback) => {
     console.log("EVENT:::", JSON.stringify(event));
 
     const tableName = event.pathParameters.model
+    let year = event.pathParameters.year;
     let table;
-    switch (tableName) {
+    switch (tableName) { //If you have other tables you would add them here as other case statements to reference that table.
         case "PDT":
-            table = tablePDV;
+            table = "PersonalDevTable";
+            break;
+        case "SAT":
+            table = "SelfAssementTable";
+            break;
+        case "PET":
+            table = "PreformanceEvaluationTable";
             break;
         default:
             throw new Error(`Unsupported resource: "${modelName}"`);
@@ -41,6 +58,7 @@ exports.listItems = async (event, context, callback) => {
             headers,
             body: JSON.stringify(data.Items)
         }
+
         callback(null, response);
     }).promise();
 

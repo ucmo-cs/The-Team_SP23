@@ -40,3 +40,8 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+#serverless
+serverless/.serverless/
+serverless/.dynamodb/
+serverless/node_modules/

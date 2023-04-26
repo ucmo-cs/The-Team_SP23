@@ -1,9 +1,20 @@
 'use strict';
 
 const AWS = require('aws-sdk');
+
+let options = {}
+if (process.env.IS_OFFLINE) {
+    options = {
+      region: 'localhost',
+      endpoint: 'http://localhost:8000'
+    }
+}
+
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
 
 const pdtTable = process.env.PERSONAL_TABLE; //Grab the table name from env variables defined in serverless.yml
+const selfTable = process.env.SELF_TABLE;
+const preformanceTable = process.env.PREFORMANCE_TABLE;
 
 exports.getItem = async (event, context, callback) => {
     let headers = {
@@ -19,7 +30,13 @@ exports.getItem = async (event, context, callback) => {
     let table;
     switch (tableName) { //If you have other tables you would add them here as other case statements to reference that table.
         case "PDT":
-            table = pdtTable;
+            table = "PersonalDevTable";
+            break;
+        case "SAT":
+            table = "SelfAssementTable";
+            break;
+        case "PET":
+            table = "PreformanceEvaluationTable";
             break;
         default:
             throw new Error(`Unsupported resource: "${modelName}"`);

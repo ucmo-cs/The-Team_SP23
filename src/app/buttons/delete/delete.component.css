@@ -1,0 +1,20 @@
+.delete {
+    background-color: white;
+    color: #ef9d33;
+    display: inline-block;
+    border: 2px solid #ef9d33;
+    border-radius: 50px;
+    font-size: small;
+    font-weight: bold;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px;
+    transition-duration: 0.4s;
+}
+
+.delete:hover {
+    background-color: #ef9d33;
+    border-color: transparent;
+    color: white;
+}
