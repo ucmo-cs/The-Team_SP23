@@ -9,11 +9,10 @@ Work with a team to create a section for the Risen One Consulting Employee porta
   Centralizing all key information and streamlining current processes.
 
 Technologies Used :
-UI - Angular, Angular Material
-Hosting - AWS (Lambda, DynamoDB, API Gateway, S3) 
-Backend - NodeJS
-
-Frameworks/IaC - Serverless Framework
+- UI - Angular, Angular Material
+- Hosting - AWS (Lambda, DynamoDB, API Gateway, S3) 
+- Backend - NodeJS
+- Frameworks/IaC - Serverless Framework
 
 Project Created by:
 - Nikolos Antonio (@nikolos-antonio)
@@ -22,3 +21,5 @@ Project Created by:
 - Ashlea Shaffer (@Ashleaa)
 - Lily Weiss (@lilybean-42)
 
+To unarchive a branch use:
+ git checkout -b branch_name archive/branch
